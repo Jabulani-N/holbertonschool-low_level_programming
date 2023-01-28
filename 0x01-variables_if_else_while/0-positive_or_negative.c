@@ -3,7 +3,13 @@
 #include <stdio.h>
 /* more headers goes there */
 
-/* betty style doc for function main goes there */
+
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ * this basically spams therelevant if statements.
+ */
 int main(void)
 {
  
@@ -15,15 +21,15 @@ int main(void)
     printf("%i ", n);
     if (n == 0)
       {
-	  printf("is zero");
+	  printf("is zero\n");
 	  return (0);
 
       }
       if (n > 0)
 	 {
-	   printf("is positive");
+	   printf("is positive\n");
 	     return (0);
 	 }
-      printf("is negative");
+      printf("is negative\n");
     return (0);
 }
