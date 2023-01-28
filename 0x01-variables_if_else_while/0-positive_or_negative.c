@@ -2,8 +2,6 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
-
-
 /**
  * main - Entry point
  *
@@ -12,24 +10,23 @@
  */
 int main(void)
 {
- 
-    int n;
 
-    srand(time(0));
-    n = rand() - RAND_MAX / 2;
-    /* your code goes there */
-    printf("%i ", n);
-    if (n == 0)
-      {
-	  printf("is zero\n");
-	  return (0);
+int n;
 
-      }
-      if (n > 0)
-	 {
-	   printf("is positive\n");
-	     return (0);
-	 }
-      printf("is negative\n");
-    return (0);
+srand(time(0));
+n = rand() - RAND_MAX / 2;
+/* your code goes there */
+printf("%i ", n);
+if (n == 0)
+{
+printf("is zero\n");
+return (0);
+}
+if (n > 0)
+{
+printf("is positive\n");
+return (0);
+}
+printf("is negative\n");
+return (0);
 }
