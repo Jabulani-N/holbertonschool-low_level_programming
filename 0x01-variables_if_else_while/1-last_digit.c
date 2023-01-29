@@ -9,7 +9,8 @@
  * from previous entry:
  * this basically spams the relevant if statements.
  *Current project task 1:
- * before spamming those relevant if statements, it'll first announce the last digit of n.
+ * before spamming those relevant if statements,
+ *  it'll first announce the last digit of n.
  *we'll save that last digit in a nother variable,
  * and then edit the relevant if statement spam from the previous question
  *   to apply to this new variable and criteria.
