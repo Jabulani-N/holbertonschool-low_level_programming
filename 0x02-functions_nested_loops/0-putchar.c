@@ -19,7 +19,8 @@ int main(void)
 char letters[8] = "_putchar";
 int i;
 
-for (i = 0; i <= /*strlen(letters)*/8; i++)
+for (i = 0; i <= /*strlen(letters)*/7; i++)
+/*end position=7 because array[8] is 0-7*/
 /*if this foor loop workswhen we directly state the length, */
 /*then try function strlen to pull the length*/
 /*strlenreturns a 'size_t', AKA long unsigned int*/
