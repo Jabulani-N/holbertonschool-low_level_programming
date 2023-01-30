@@ -8,9 +8,9 @@
 /*within main.h is a list of every function my functions will call*/
 /* more headers goes there */
 /**
- * main - Entry point
+ * print_alphabet - iterates a cahr through alphabet, sends it to _printchar
  *
- * Return: Always 0 (Success)
+ * Return: Void
  *
  *send the caracters in the alphabet to function _putchar
  */
