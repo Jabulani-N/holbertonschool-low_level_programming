@@ -22,7 +22,7 @@ int m;
 if (n < 0)
 {/*negative*/
 m = n * (-1);
- return (m);
+return (m);
 }
 return (n);
 }
