@@ -24,9 +24,12 @@ if (c >= 65 && c <= 90)
 {/*uppercase*/
 return (1);
 }
-if (c >= 48 && c <= 57)
-{/*number*/
-return (1);
-}
+/**
+ *we weren't supposed to acept numbers
+ * if (c >= 48 && c <= 57)
+ *{
+ *return (1);
+ *}
+ **/
 return (0);
 }
