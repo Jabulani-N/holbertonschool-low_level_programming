@@ -7,7 +7,7 @@
 /*within main.h is a list of every function my functions will call*/
 /* more headers goes there */
 /**
- * print_alphabet_x10 - iterates the previous task 10x. 
+ * print_alphabet_x10 - iterates the previous task 10x.
  *literally copied the code and surrounded it in a 10x for loop.
  *
  * Return: Void
