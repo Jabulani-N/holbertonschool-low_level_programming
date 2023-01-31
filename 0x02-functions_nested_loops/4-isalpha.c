@@ -7,6 +7,8 @@
 /*within main.h is a list of every function my functions will call*/
 /* more headers goes there */
 /**
+ *copies Task 2.
+ *
  * _isalpha - just see if the number is lower than the minimum lowercase value.
  *if so, see if it's lower than the maximum lowercase ascii.
  *otherwise, try next condition,
