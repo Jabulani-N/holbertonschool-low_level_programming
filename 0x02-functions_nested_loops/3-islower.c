@@ -10,6 +10,7 @@
  * _islower - just see if the number is lower than the minimum lowercase value.
  *if so, see if it's lower than the maximum lowercase ascii.
  *otherwise, return the 'no it's not' output.
+ * @c: the character we'll be judging the status of
  * Return: depends
  */
 int _islower(int c)
