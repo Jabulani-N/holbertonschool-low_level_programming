@@ -12,7 +12,12 @@ then
 elif 5 (buzz)
 else
 print the actual number
-
+FORGET NESTED IF STATEMENTS
+multiples of both just means multiples of 15. start it off with a check for 15, then do the elif chain
+FIZZBUZZ WILL NEED TO PROVIDE IT'S OWN MAIN FUNCTION
+basically, the fizzbuzz.c file needs to have a function called 'main' that returns integer 0.
+it doesn't matter whether it calls another funciton to do the comparisons and stuff, but the file we submit must have a main so it know waht to run. compiler will only know to run the function 'main,'
+ from  wihc anything we want ot use must be called.
 
 triangles is what you accidentally made in task 7 when you make the spaces bit count backwards in stead of forwards.
 have it jsut use i instead of n-i, and youll get the general shape by default.
