@@ -15,7 +15,7 @@
  *otherwise, return the 'no it's not' output of the offending number
  * Return: always zero because it's a main
  */
-int main (void)
+int main(void)
 {
 int i;
 
