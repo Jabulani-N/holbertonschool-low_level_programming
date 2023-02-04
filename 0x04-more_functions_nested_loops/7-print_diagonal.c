@@ -22,7 +22,7 @@ for (i = n; i > 0; i--)
 /*i is counting backwards so if we get a negative n,*/
 /* it'll skip looping becaue it's never above 0*/
 {
-for (j = 0; j < (n-i); j++)
+for (j = 0; j < (n - i); j++)
 /* j has to count up because it is the number of spaces*/
 /*this means we need to do n-i spaces*/
 /*where n is the total number of lines, i is n-number of lines completed*/
@@ -33,5 +33,7 @@ _putchar(' ');
 _putchar('\\');
 _putchar('\n');
 }
+if (n <= 0)
+_putchar ('\n');/*prints \n if it would print nothing*/
 return;
 }
