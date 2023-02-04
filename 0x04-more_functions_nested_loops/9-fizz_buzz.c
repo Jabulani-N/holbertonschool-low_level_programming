@@ -19,7 +19,8 @@ int main(void)
 {
 int i;
 
-for (i = 1; i <= 100; i++)
+for (i = 1; i <= 99; i++)
+  /*caps at 99 because it can't end on a spcace*/
 {
 if (i % 15 == 0)
 {
@@ -38,6 +39,6 @@ else
 	printf("%i ", i);
 }
 }
-putchar('\n');
+printf("Buzz\n");
 return (0);
 }
