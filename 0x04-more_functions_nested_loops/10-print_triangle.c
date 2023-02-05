@@ -37,7 +37,7 @@ for (j = 1; j <= (i - 1) ; j++)
 {
 _putchar(' ');
 }
- for (j = 1; j <= (size - i + 1) ; j++)
+for (j = 1; j <= (size - i + 1) ; j++)
 /* hashes loop*/
 /* linenum=1+size-i*/
 /* I wantlinenum spaces here*/
