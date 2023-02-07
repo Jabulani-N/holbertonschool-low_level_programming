@@ -3,21 +3,22 @@
 #include <stdlib.h>
 
 /**
- *print_rev - use the preceding 2x ago task's code to count the size
- *then use that size to start at the end
- *	of the preceding task's puts
- *	to send the whole thing in reverse
+ *rev_string - use the preceding task's code to...
+ *return the reversed string instead of _putchar-ing it
+ *this means shoving it into a new char array instead
+ *and then making s equal that array.
  * @str: the char array that'll be investigsted
  * Return: Void
- * basically copied form the previous 2 task
+ * basically copied form the previous 1 task
  **/
-void print_rev(char *str)
+void rev_string(char *s)
 {
 	int i;
 	int j;
+	char reversed[1];
 
 	 i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 /*so when we referenc the array itself, we already have access to it*/
 /*so we don't need th asterik anymore*/
 		{
@@ -26,13 +27,15 @@ void print_rev(char *str)
 	i--;
  /*i is now equal to the last valid index of the string*/
 	/* i-- removed the invalid final index*/
-       /*not removing it created an unneeded char*/
+		/*not removing it created an unneeded char*/
 	for (j = i; j >= 0; j--)
 	/*count backwards from the last index to zero (first index)*/
 	{
-		_putchar(str[j]);
+		reversed[i-j] = s[j];
+		/*puts whatever wass last in the first slot.*/
+		/*vice-versand so on*/
 	}
-	_putchar('\n');
+*s = reversed;
 return;
 }
 
