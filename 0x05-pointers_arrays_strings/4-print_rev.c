@@ -23,6 +23,7 @@ void print_rev(char *str)
 		{
 		i++;
 		}
+	i--;
  /*i is now equal to the last valid index of the string*/
 	for (j = i; j >= 0; j--)
 	/*count backwards from the last index to zero (first index)*/
