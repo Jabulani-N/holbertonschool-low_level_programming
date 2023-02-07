@@ -12,14 +12,15 @@ int _strlen(char *s)
 {
 	int i;
 
-	i=0;
+	i = 0;
 	while (s[i] != '\0')
 		/*so when we referenc the array itself, we already have access to it*/
 		/*so we don't need th asterik anymore*/
 	{
 	i++;
-	}	
+	}
 		return (i);
-	/*like the strlen manual entry, we're gonna go until we hit the "terminating null byte '/0'"*/
+	/*like the strlen manual entry says,*/
+	       /*we're gonna go until we hit the "terminating null byte '/0'"*/
 }
 
