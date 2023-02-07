@@ -24,6 +24,7 @@ void _puts(char *str)
 /*to remind yourself how to print to standard output*/
 	i++;
 	}
+	_putchar('\n');
 		return;
 	/*like the strlen manual entry says,*/
 	       /*we're gonna go until we hit the "terminating null byte '/0'"*/
