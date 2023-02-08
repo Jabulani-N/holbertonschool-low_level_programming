@@ -15,16 +15,19 @@ char *_strcat(char *dest, char *src)
 	int destSize;
 	int srcPosition;
 
+	destSize = 0;
+	srcPosition = 0;
+
 	while (dest[destSize] != '\0')
 	{
-		destSize++;)	
+		destSize++;	
 	}
 	/*we now know destSize, and can append starting at the final position*/
 	/*we'll use srcPosition to check and make sure we stop at the end or src*/
 	while (src[srcPosition] != '\0')
 	{
-		dest[destsize + srcPosition]] = src[srcPosition];
+		dest[destSize + srcPosition] = src[srcPosition];
 		srcPosition++;
 	}
-return (*dest);
+return (dest);
 }
