@@ -24,14 +24,15 @@ char *_strncat(char *dest, char *src, int n)
 	destSize = 0;
 	srcPosition = 0;
 
-	while (dest[destSize] != '\0' && destSize <= (n / 4))
-	/* a char is 8 bytes, so hte size/8 = number of chars allowed*/
+	while (dest[destSize] != '\0')
+	
 	{
 		destSize++;
 	}
 	/*we now know destSize, and can append starting at the final position*/
 	/*we'll use srcPosition to check and make sure we stop at the end or src*/
-	while (src[srcPosition] != '\0')
+	while (src[srcPosition] != '\0' && srcPosition <= (n / 4))
+	/* a char is 8 bytes, so n/8 = number of chars from src allowed to add*/
 	{
 		dest[destSize + srcPosition] = src[srcPosition];
 		srcPosition++;
