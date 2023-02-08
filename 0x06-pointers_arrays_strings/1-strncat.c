@@ -6,6 +6,8 @@
  * note *src will bring it's own terminating '\0'
  * @dest: this guy will get modified
  * @src: this guy will get read
+ * @n: byte cap. do not exceed.
+ *
  * Return: the changed variable.
  * the return format will cause it to become a pointer
  * This is copied from Task 0
