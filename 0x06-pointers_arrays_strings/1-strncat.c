@@ -22,7 +22,7 @@ char *_strncat(char *dest, char *src, int n)
 	destSize = 0;
 	srcPosition = 0;
 
-	while (dest[destSize] != '\0' && destSize =< (n / 4))
+	while (dest[destSize] != '\0' && destSize <= (n / 4))
 	/* a char is 8 bytes, so hte size/8 = number of chars allowed*/
 	{
 		destSize++;
