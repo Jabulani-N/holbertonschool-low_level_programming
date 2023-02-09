@@ -10,7 +10,7 @@
 /*strcmp compares the items char-by-char*/
 /*online resources imply it compares ASCII values*/
 /*due to this, let's try going while they are the same and not '\0'*/
-/*while the difference between them is 0, and (either) is not terminating null*/
+/*while the difference between them is 0 and (either) is not terminating null*/
 /*keep iterating*/
 /*when it breaks, return the difference*/
 /*if it never broke until it hit the end, the idff will still be 0*/
