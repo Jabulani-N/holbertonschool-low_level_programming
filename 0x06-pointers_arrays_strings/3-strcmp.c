@@ -8,13 +8,11 @@
  **/
 
 /*we'll start by trying: just directly comparing entire variables*/
+/*That didn't get correct output, but didn't err.*/
+
+/*next, let's try returning the difference*/
 
 int _strcmp(char *s1, char *s2)
 {
-	if (s1 < s2)
-		return (1);
-	else if (s1 > s2)
-		return (-1);
-	else
-		return (0);
+	return (s1-s2);
 }
