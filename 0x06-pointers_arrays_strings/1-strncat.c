@@ -25,7 +25,7 @@ char *_strncat(char *dest, char *src, int n)
 	srcPosition = 0;
 
 	while (dest[destSize] != '\0')
-	
+
 	{
 		destSize++;
 	}
@@ -37,6 +37,7 @@ char *_strncat(char *dest, char *src, int n)
 		dest[destSize + srcPosition] = src[srcPosition];
 		srcPosition++;
 	}
-	/*is the error perhaps that it is includign the null at the end of the too-fat sources?*/
+/*is the error perhaps that it is including the null*/
+ /*  at the end of the too-fat sources?*/
 return (dest);
 }
