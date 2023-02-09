@@ -1,0 +1,20 @@
+#include "holberton.h"
+/**
+ * _strcmp - compare two strings and say whose bigger
+ * tells via returning an integer
+ * @s1: for comparion
+ * @s2: for comparison
+ * Return: integer. sign/0 depends on if s1<s2.
+ **/
+
+/*we'll start by trying: just directly comparing entire variables*/
+
+int _strcmp(char *s1, char *s2)
+{
+	if (s1 < s2)
+		return (1);
+	else if (s1 > s2)
+		return (-1);
+	else
+		return (0);
+}
