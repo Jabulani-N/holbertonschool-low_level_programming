@@ -21,7 +21,8 @@ void reverse_array(int *a, int n)
 	for (position = 0; position <= (n / 2); position++)
 	{
 		UQHolder = a[position];
-		a[position] = a[n - position];
+		a[position] = a[n - position - 1];
+		/* -1 so it doesn't pull the terminating null character*/
 		a[n - position] = UQHolder;
 	}
 return;
