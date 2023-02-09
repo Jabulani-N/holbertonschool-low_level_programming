@@ -37,5 +37,6 @@ char *_strncat(char *dest, char *src, int n)
 		dest[destSize + srcPosition] = src[srcPosition];
 		srcPosition++;
 	}
+	/*is the error perhaps that it is includign the null at the end of the too-fat sources?*/
 return (dest);
 }
