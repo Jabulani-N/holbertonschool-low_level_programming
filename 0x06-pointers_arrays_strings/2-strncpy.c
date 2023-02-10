@@ -14,18 +14,18 @@
 /*get dest size*/
 /*move everything from src to dest*/
 /*fill superflous dest slots with '\0'*/
-char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)
 {
 	int destSize;
 	int pos;
 
 	for (pos = 0; dest[pos] != '\0'; pos++)
 	{
-		destsize++;
+		destSize++;
 	}
 /*destSize established*/
 
-	for (pos =0; src[pos] != '\0'; && pos <= n && pos <= destSize; pos++)
+	for (pos = 0; src[pos] != '\0' && pos <= n && pos <= destSize; pos++)
 	/*begin replacements*/
 	{
 		dest[pos] = src[pos];

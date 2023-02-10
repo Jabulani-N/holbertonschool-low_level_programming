@@ -33,7 +33,7 @@ char *_strncat(char *dest, char *src, int n)
 	/*we'll use srcPosition to check and make sure we stop at the end or src*/
 	while (src[srcPosition] != '\0' && srcPosition < (n / 1))
 	/* a char is 8 bytes, so n/8 = number of chars from src allowed to add*/
-	/*DO NOT DO THE ABOVE DIVISION. it gets the same answer, but it will be wrong*/
+	/*DO NOT DO THE ABOVE DIVISION. it gets the same answer but it will be wrong*/
 	{
 		dest[destSize + srcPosition] = src[srcPosition];
 		srcPosition++;
