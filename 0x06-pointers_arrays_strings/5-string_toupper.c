@@ -11,24 +11,22 @@
 /**/
 char *string_toupper(char *input)
 {
-	char output[];
+	/*char output[];*/
+	/*it doesn't liek unknown rray size, so let's jsut directly change the source and re-output it*/
 	int size;
 	int pos;
 
 	size = 0;
-	while (*input)
-	/*trying an iteration style I saw elsewhere*/
+	for (pos = 0; input[pos] != '\0'; pos++)
 	{
 		size ++;
-		input++;
+		
 	}
 
 	for (pos = 0; pos <= size; pos++)
 	{
-		if (input[pos] >= 97 && *input <= 122) /*if lowercase*/
-			output[pos] = (input[pos] - 32); /*make cuppercase*/
-		else
-			output[pos] = input[pos];/*take as is*/
+		if (input[pos] >= 97 && input[pos] <= 122) /*if lowercase*/
+			input[pos] = (input[pos] - 32); /*make cuppercase*/
 	}
-	return (output);
+	return (input);
 }
