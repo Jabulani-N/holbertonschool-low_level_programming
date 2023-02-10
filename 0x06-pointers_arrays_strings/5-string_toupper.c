@@ -11,13 +11,24 @@
 /**/
 char *string_toupper(char *input)
 {
+	char output[];
+	int size;
+	int pos;
+
+	size = 0;
 	while (*input)
-	/*I saw smoeone else iterate an array like this*/
-	/*trying it myself*/
+	/*trying an iteration style I saw elsewhere*/
 	{
-		if (*input >= 97 && *input <= 122) /*if lowercase*/
-			*input = (*input - 32) /*make cuppercase*/
-		/*we're seeing if *input this way lets us directly edit the cnotents */
-		input++
+		size ++;
+		input++;
 	}
+
+	for (pos = 0; pos <= size; pos++)
+	{
+		if (input[pos] >= 97 && *input <= 122) /*if lowercase*/
+			output[pos] = (input[pos] - 32); /*make cuppercase*/
+		else
+			output[pos] = input[pos];/*take as is*/
+	}
+	return (output);
 }
