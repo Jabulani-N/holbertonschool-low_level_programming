@@ -9,7 +9,15 @@
 
 /**/
 /**/
-char *string_toupper(char *s)
+char *string_toupper(char *input)
 {
-while *s
+	while (*input)
+	/*I saw smoeone else iterate an array like this*/
+	/*trying it myself*/
+	{
+		if (*input >= 97 && *input <= 122) /*if lowercase*/
+			*input = (*input - 32) /*make cuppercase*/
+		/*we're seeing if *input this way lets us directly edit the cnotents */
+		input++
+	}
 }
