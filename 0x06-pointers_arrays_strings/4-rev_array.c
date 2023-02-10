@@ -14,17 +14,19 @@
 
 void reverse_array(int *a, int n)
 {
-	int UQHolder; /*multi-purpose, eternal holder variable*/
-	/*UQHolder is int because the array holds int*/
+	int Holder;
+	/*Holder is int because the array holds int*/
 	int position;
 
 	for (position = 0; position <= (n / 2); position++)
 	{
-		UQHolder = a[position];
+		Holder = a[position];
 		a[position] = a[n - position - 1];
-		/* -1 so it doesn't pull the terminating null character*/
-		a[n - position - 1] = UQHolder;
-		/*the place we pulled from is the place that gets replaced*/
-		/*this cannot exceed the bounds of the array*/
+		/* -1 so it doesn't interact with the terminating null charr*/
+		a[n - position - 1] = Holder;
+		/*-1 so the place we pulled from is the place that gets replaced*/
 	}
+	/*note current code BREAKS IF SIZE = 2*/
+	/*find what to do if position = 1. may becme if-statement*/
+return;
 }
