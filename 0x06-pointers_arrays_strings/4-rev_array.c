@@ -18,14 +18,14 @@ void reverse_array(int *a, int n)
 	/*UQHolder is int because the array holds int*/
 	int position;
 
-	for (position = 0; position <= (n / 2 + 1); position++)
-		/*+1 to counteract the position -1 that exists below*/
-		/*counteract as in 'make sure everything gets counted'*/
+	for (position = 0; position <= (n / 2); position++)
 	{
 		UQHolder = a[position];
 		a[position] = a[n - position - 1];
 		/* -1 so it doesn't pull the terminating null character*/
-		a[n - position] = UQHolder;
+		a[n - position - 1] = UQHolder;
+		/*the place we pulled from is the place that gets replaced*/
+		/*this cannot exceed the bounds of the array*/
 	}
 return;
 }
