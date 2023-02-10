@@ -27,5 +27,7 @@ void reverse_array(int *a, int n)
 		/*the place we pulled from is the place that gets replaced*/
 		/*this cannot exceed the bounds of the array*/
 	}
+	a[n] = '\0';
+	/*assuring terminating null preserved*/
 return;
 }
