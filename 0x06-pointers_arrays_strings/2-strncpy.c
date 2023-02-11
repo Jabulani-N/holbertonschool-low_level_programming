@@ -16,25 +16,24 @@
 /*fill superflous dest slots with '\0'*/
 char *_strncpy(char *dest, char *src, int n)
 {
-	int destSize;
-	int pos;
+	int srcl = 0;/*source length*/
+	int pos = 0;
 
-	for (pos = 0; dest[pos] != '\0'; pos++)
+	while (src[srcl] != '\0')
 	{
-		destSize++;
+		srcl++;
 	}
-/*destSize established*/
+/*source length established*/
 
-	for (pos = 0; src[pos] != '\0' && pos <= n && pos <= destSize; pos++)
+	for (pos = 0; src[pos] != '\0' && pos < n; pos++)
 	/*begin replacements*/
 	{
 		dest[pos] = src[pos];
 	}
 
 	/*consider 
-	 * n>destSize but smaller than src
-	 * - handled in above for loop
-	 *   - exits when position is end of dest
+	 * DONT FIX IT IF SOURCE TOO SMALL
+	 * - originalfunction doesnt, so we dont either
 	 *
 	 * n less than destSize
 	 * - handled. for loop ends
@@ -45,13 +44,15 @@ char *_strncpy(char *dest, char *src, int n)
 	 * src is smaller than n
 	 * -handled. loop ends with src's end
 	 * */
-	if (destSize > pos)
-	/*fill everything above current pos with null*/
-	{
-		for (; pos <= destSize; pos++)
+
+	/*fill everything above past source with null until n */
+	/*does not care if source was too short. it WILL have n chars*/
+pos = srcl;
+		while (pos < n)
 		{
 			dest[pos] = '\0';
+			pos++;
 		}
-	}
-return( dest);
+
+return(dest);
 }
