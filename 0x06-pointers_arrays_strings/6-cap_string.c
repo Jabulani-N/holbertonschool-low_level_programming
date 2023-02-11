@@ -1,27 +1,14 @@
-/*
- *cap_string - scans for lowercase
+/**
+ * cap_string - scans for lowercase
  * if lowercase, and previous char was divider, make uppercase
+ * @imp: array to be scanned
+ * Return: edited array, char
  *
- * @char: array to be scanned
  *
- *Return: edited array: char
  *
- */
-
-/*
- * if statement to make sure it's lowercase
- * switch case for previous index being a separator.
- *
- * each case will check for a  separator directly.
- * each case will have the same commmand of capitalizing 
- * no case needed for no change = no 'default' necessary
- *because it is impossible for more than one to be true,
- *	break is engi-redundant
- *
- *	To be betty compliant, compress cases into a few || statements
-
  * \t = tab
- */
+ **/
+
 char *cap_string(char *imp)
 {
 	int index;
@@ -37,17 +24,17 @@ char *cap_string(char *imp)
 			else /*else prevents looking at array positon = -1*/
 			{
 			if (imp[index - 1] == ' ' ||
-				imp[index - 1] == '\n'||
-				imp[index - 1] == '\t'||
-				imp[index - 1] == ','||
-				imp[index - 1] == ';'||
-				imp[index - 1] == '.'||
-				imp[index - 1] == '!'||
-				imp[index - 1] == '?'||
-				imp[index - 1] == '"'||
-				imp[index - 1] == '('||
-				imp[index - 1] == ')'||
-				imp[index - 1] == '{'||
+				imp[index - 1] == '\n' ||
+				imp[index - 1] == '\t' ||
+				imp[index - 1] == ',' ||
+				imp[index - 1] == ';' ||
+				imp[index - 1] == '.' ||
+				imp[index - 1] == '!' ||
+				imp[index - 1] == '?' ||
+				imp[index - 1] == '"' ||
+				imp[index - 1] == '(' ||
+				imp[index - 1] == ')' ||
+				imp[index - 1] == '{' ||
 				imp[index - 1] == '}'
 				)
 				imp[index] = (imp[index] - 32);
