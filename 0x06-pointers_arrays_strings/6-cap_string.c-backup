@@ -39,21 +39,21 @@ char *cap_string(char *imp)
 			if (imp[index - 1] == ' ' ||
 				imp[index - 1] == '\n'||
 				imp[index - 1] == '\t'||
-				imp[index - 1] == ','||
-				imp[index - 1] == ';'||
-				imp[index - 1] == '.'||
-				imp[index - 1] == '!'||
-				imp[index - 1] == '?'||
-				imp[index - 1] == '"'||
-				imp[index - 1] == '('||
-				imp[index - 1] == ')'||
-				imp[index - 1] == '{'||
-				imp[index - 1] == '}'
-				)
-				imp[index] = (imp[index] - 32);
+			    	imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+			    imp[index - 1] == '\n'||
+
+				}
 			}
 		}
 	}
-	return (imp);
+return (imp);
 }
-
