@@ -25,15 +25,17 @@ char *leet(char *imp)
 	for (impIndex = 0; imp[impIndex] != '\0'; impIndex++)
 	/*iterate through imp*/
 	{
-		for (magicIndex = 0; real[magicIndex] != '\0'; magicIndex++)
+		for (magicIndex = 0; magicIndex < 10; magicIndex++)
 		/*iterate through real during current letter of imp*/
-		/*this means, "do the contained for every letter of real"*/
+		/*this means, do the contained for every letter of real*/
 		{
 			if (imp[impIndex] == real[magicIndex])
 			/*if current imp letter matches current real letter*/
 			/*The for loop for magicIndex makes us check every real char*/
-			imp[impIndex] = leetspeek[magicIndex];
-			/*change imp's real to leetspeek ver*/
+			{
+				imp[impIndex] = leetspeek[magicIndex];
+				/*change imp's real to leetspeek ver*/
+			}
 		}
 
 	}
