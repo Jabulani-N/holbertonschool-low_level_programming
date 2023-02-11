@@ -24,15 +24,12 @@ char *_strncpy(char *dest, char *src, int n)
 		srcl++;
 	}
 /*source length established*/
-
 	for (pos = 0; src[pos] != '\0' && pos < n; pos++)
 	/*begin replacements*/
 	{
 		dest[pos] = src[pos];
 	}
-
 	/*
-	 * consider
 	 * DONT FIX IT IF SOURCE TOO SMALL
 	 * - originalfunction doesnt, so we dont either
 	 *
@@ -44,9 +41,7 @@ char *_strncpy(char *dest, char *src, int n)
 	 *
 	 * src is smaller than n
 	 * -handled. loop ends with src's end
-	 * 
-	 * */
-
+	 */
 	/*fill everything above past source with null until n */
 	/*does not care if source was too short. it WILL have n chars*/
 pos = srcl;
