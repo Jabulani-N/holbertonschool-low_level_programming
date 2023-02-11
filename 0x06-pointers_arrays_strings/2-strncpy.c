@@ -3,7 +3,7 @@
  * is src is shorter, fill the remainder of dest with '\0'
  *
  *only take n characters from src
- * 
+ *
  * @dest: about to change into the first...
  * @n: number of characters to take from...
  * @src: will provide characters for copy
@@ -31,7 +31,8 @@ char *_strncpy(char *dest, char *src, int n)
 		dest[pos] = src[pos];
 	}
 
-	/*consider 
+	/*
+	 * consider
 	 * DONT FIX IT IF SOURCE TOO SMALL
 	 * - originalfunction doesnt, so we dont either
 	 *
@@ -43,6 +44,7 @@ char *_strncpy(char *dest, char *src, int n)
 	 *
 	 * src is smaller than n
 	 * -handled. loop ends with src's end
+	 * 
 	 * */
 
 	/*fill everything above past source with null until n */
@@ -54,5 +56,5 @@ pos = srcl;
 			pos++;
 		}
 
-return(dest);
+return (dest);
 }
