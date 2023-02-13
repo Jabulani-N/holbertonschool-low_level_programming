@@ -11,7 +11,7 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	while(n--)/*n does not equal zero is n being true*/
+	while (n--)/*n does not equal zero is n being true*/
 	/*it'll read the -- after it's already used the current value*/
 	{
 		s[n - 1] = b;
