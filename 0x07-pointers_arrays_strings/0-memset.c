@@ -21,4 +21,9 @@ char *_memset(char *s, char b, unsigned int n)
 	}
 	return (s);
 }
-
+/*known bugs
+ *
+ *segmentation fault when run.
+ *	consider altering iteration that runs n times
+ *		count up from spot 0 to spot n-1 (via "< n")
+ */
