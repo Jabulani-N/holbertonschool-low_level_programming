@@ -19,6 +19,6 @@ char *_memset(char *s, char b, unsigned int n)
 		/*-1 allows it to hit 0 despite n never hitting 0*/
 		/*	also protects the terminating null at position initial n*/
 	}
-	return (*s);
+	return (s);
 }
 
