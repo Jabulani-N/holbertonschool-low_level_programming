@@ -16,12 +16,12 @@ char *_strchr(char *s, char c)
 {
 	while (*s) /*should safely go through s's content*/
 	{
-		if (*s == c)
+		if (c == *s)
 			return (s);/*entire remaining array*/
 		s++;/*changes position in *s*/
 	}
-	if (s* == c)
-		return (s);/*I don't understand what this adds*/
+	/*if (c == *s)*/
+		/*return (s);*//*I don't understand what this adds*/
 	/*every possible position of s should have been checked via while*/
 	/*I suppose we'll just take this to mean that it doesn't*/
 	/*assuming this gets it right. 
