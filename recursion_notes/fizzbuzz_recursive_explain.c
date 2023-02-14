@@ -14,15 +14,21 @@ int fizzbuzz_recursive_explain (int IrisHeart)
 
 	/*if IrisHeart == 0, fizzbuzz stops immediately, without doing anything else*/
 	if (IrisHeart == 0)
-		return (0);
+		{
+			printf("I'm the fizzbuzz that received %d! \nBecause I got %d, and that was the condition that instantly returns without recursing, the recursion chain is broken, and now we go back to my parent, starting with the line after the one that called me!\n", IrisHeart, IrisHeart);
+			return (0);
+		}
+
 
 	/*telling you i'm about to recurse*/
 	printf("I'm about to recurse! right now, number I have is %d, so I will send (%d-1), which is %d, to myself.\n", IrisHeart, IrisHeart, IrisHeart - 1);
 
 /*if you want to see what it looks like when you do the recursion at the end,*/
-	/*then comment the line below, and take the one under the fizzbuzz logic out of comments to make it get read*/
+	/*then comment the two code lines below, and take the one under the fizzbuzz logic out of comments to make it get read*/
 
-	fizzbuzz_recursive_explain (IrisHeart - 1); /*this is where I recurse*/
+	fizzbuzz_recursive_explain (IrisHeart - 1);/*this is where I recurse*/
+
+	printf("I'm the fizzbuzz that recived %d!\n I'm about to start performing whatever came after the line where I called myself!\n",IrisHeart);/*telling you that we are passed the line that recursed*/
  	
 
 	/*fizzbuzz logic*/
