@@ -2,34 +2,28 @@
  * _strchr - pointer to first occurance of c in s
  * @s: string to scan for character c
  * @c: character we seek within s
- * Return: s[index that had c], or null if there were no occurances
+ * Return: first occurence through end of string
  *	function declaration having asterik turns return into a pointer)
  *
- * because s is a char, it'll have to follow char rules
- *	that means we can treat it like any other array (hope)
+ * becase s is char, it follows char rules.
  *
- * Mostly copied from Task 0
+ * Mostly copied from another person's completion of this task
+ * will use this to learn to safely iterate through a char array
+ * previous attempts segmentation faulted during while loops
  **/
 
 char *_strchr(char *s, char c)
 {
-	int hasC = -1;
-	int index = 0;
-
-	while (s[index] != c && s[index] != '\0')
+	while (*s) /*should safely go through s's content*/
 	{
-		index++;
-		/*checks all content starting at index 0*/
-		/*first match breaks the while loop*/
+		if (*s == c) 
+			return (s);/*entire remaining array*/
+		s++;/*changes position in *s*/
 	}
-	/*if (hasC == -999)*//*string got found, so hasC never changed*/
-		return (s[index]);
-/*return null if not found, because that's the terminator at end of string*/
-	/*pointer to null is segmentation fault;*/
-	/*	may need something different for not-found case*/
-	/*return ('\0');*/
+	return ('\0');/*s never had it, so return null instead*/
 }
 /*
  * known bugs
  *
+  *
  */
