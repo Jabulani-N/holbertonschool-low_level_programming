@@ -21,3 +21,6 @@ you can also do while (arrayname[index]) … index++
 if you do s += 2, you get everything in array s from position 2 up
 - s -= 2 is position 2 down
 - s == 2 is position 2 only
+
+you can also do &array[index], wguch will send address of position index.
+- this'll cause it to read everything following s[index] to terminating null
