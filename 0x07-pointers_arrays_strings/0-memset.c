@@ -11,8 +11,7 @@
 
 char *_memset(char *s, char b, unsigned int n)
 {
-	while (n > 0)/*n does not equal zero is n being true*/
-	/*it'll read the -- after it's already used the current value*/
+	while (n > 0)
 	{
 		s[n - 1] = b;
 		n--;
@@ -25,7 +24,8 @@ char *_memset(char *s, char b, unsigned int n)
 /*
  * known bugs
  *
- *segmentation fault when run.
+ *segmentation fault when run. - SOLVED.
  *	consider altering iteration that runs n times
  *		count up from spot 0 to spot n-1 (via "< n")
+ *		THIS FIXED BUG
  */
