@@ -15,3 +15,7 @@ when using a pointer to a char array's name to iterate through its index, it'll 
 - - therefore, you can use 
 - - - while *(arrayName + index != 0) … index++ or
 - - - while (*arrayname) … arrayName++
+
+if you do s += 2, you get everything in array s from position 2 up
+- s -= 2 is position 2 down
+- s == 2 is position 2 only
