@@ -34,11 +34,11 @@ int fizzbuzz_recursive_explain (int IrisHeart)
 	/*fizzbuzz logic*/
 	if (IrisHeart % 15 == 0)
     	{
-		printf("I'm the fizzbuzz that recieved %d, so I say 'Fizzbuzz'\n", IrisHeart);
+		printf("I'm the fizzbuzz that recieved %d,\nI say 'Fizzbuzz'\n", IrisHeart);
     	}
  	 else if (IrisHeart % 3 == 0)
  	   {
- 		printf("I'm the fizzbuzz that recieved the number %d! I say 'Fizz'\n", IrisHeart);
+ 		printf("I'm the fizzbuzz that recieved the number %d!\nI say 'Fizz'\n", IrisHeart);
  	   }
  	 else if (IrisHeart % 5 == 0)
  	   {
