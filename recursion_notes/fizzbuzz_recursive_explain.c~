@@ -1,0 +1,12 @@
+#include "main.h"
+
+int fizzbuzz_recursive_explain (int IrisHeart)
+{
+  if (IrisHeart == 0)
+    return (0);
+  fizzbuzz_recursive_explain (IrisHeart - 1);
+  if (IrisHeart % 15 == 0)
+    {
+      printf("\nMy number was %d, so I say Fizzbuzz\n", IrisHeart);
+    }
+}
