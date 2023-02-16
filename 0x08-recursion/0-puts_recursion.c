@@ -14,10 +14,11 @@
 
 void _puts_recursion(char *s)
 {
-	if (s)/*if it works for while, just maybe we can if it*/
+	if (*s)/*if it works for while loops, just maybe we can if it*/
 	{
 		_putchar(*s);/*content of s*/
-		_puts_recursion(s++);/*s but only slots 1 and up*/
+		s++;/*move s to the next slot*/
+		_puts_recursion(s);/*recurse*/
 	}
 	return;
 }
