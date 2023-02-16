@@ -1,5 +1,5 @@
 /**
- * _puts_recucrsion(char *s) - scans char array s
+ * _puts_recursion - scans char array s
  *	_putchar the first part of the array
  *		then shove the remaining letters into recursion
  *		we can do this via sending it s++, or s+1. or s >= 1
@@ -7,7 +7,7 @@
  *		remember the first slot in an array is position 0
  *
  * @s: char array in question
- * Return - Always Void
+ * Return - nothing (Void)
  **/
 
 #include "main.h"
@@ -20,5 +20,7 @@ void _puts_recursion(char *s)
 		s++;/*move s to the next slot*/
 		_puts_recursion(s);/*recurse*/
 	}
-	return;
+	else
+		_putchar('\0');
+/*no return because it's void*/
 }
