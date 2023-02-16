@@ -10,9 +10,9 @@
  *
  * @s: char array in question
  * Return - nothing (Void)
- * 
+ *
  * copied form Task 0,
- * 	but reordered to make the last one run first
+ *	but reordered to make the last one run first
  **/
 
 #include "main.h"
