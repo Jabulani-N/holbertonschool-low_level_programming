@@ -10,12 +10,14 @@
  * Return - Always Void
  **/
 
+#include "main.h"
+
 void _puts_recursion(char *s)
 {
 	if (s)/*if it works for while, just maybe we can if it*/
 	{
-		_putchar(s);
-		_puts_recursion(s >= 1)
+		_putchar(*s);/*content of s*/
+		_puts_recursion(s++);/*s but only slots 1 and up*/
 	}
 	return;
 }
