@@ -21,16 +21,20 @@ void _print_rev_recursion(char *s)
 {
 	if (*s)/*if it works for while loops, just maybe we can if it*/
 	{
-		s++;/*move s to the next slot*/
-		_print_rev_recursion(s);/*recurse*/
-		s--; /*put s back where it started for this iteration*/
+		/*s++;*//*move s to the next slot*/
+		_print_rev_recursion(s + 1);/*recurse*/
+		/*s--;*/ /*put s back where it started for this iteration*/
 		_putchar(*s);/*content of s*/
 		/*
 		 * because we recursed first, it'll go all the way t the end,
 		 * and the last to get called will be the first to finish
 		 */
 	}
-	else
+/*
+ * there is a newline included in the string this time, so I don't need to add this one
+ * else
 		_putchar('\n');
+*/
+
 /*no return because it's void*/
 }
