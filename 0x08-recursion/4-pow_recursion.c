@@ -4,7 +4,7 @@
  *power is number times itself
  * for example, 5^5 = 5x5x5x5x5
  * @x: number to be multiplied♥
- * @y; number of times to multiply x
+ * @y: number of times to multiply x
  * Return: x times self,y-1
  *	but only if y is 0 or higher
  *Returns -1 ifi nput was negative
@@ -25,6 +25,6 @@ int _pow_recursion(int x, int y)
 	}
 	else if (y == 0) /*last consideration*/
 		return (1);/*x^0 = 1, so this is correct even if we started with y=0*/
-	else/*neither 0 nor greater than 0 musst be negative*/
+	else/*neither 0 nor greater than 0 must be negative*/
 		return (-1);
 }
