@@ -7,6 +7,7 @@ req 3: file runnable/compilable
 
 
 power can just be multply by self, reduce power by 1; if power equals 1, return self; if power equals 0, return 1 (x^0=1 always)
+- also if negative power return -1. do this BEFORE REURSIVE IF CAN FIRE
 
 natural number = counting number = whole number > 0
 on square root, it only cares if the target  has a whole square root.
