@@ -17,3 +17,9 @@ google answer to prime number check as well, since we only have one input to wor
 - maybe if we have it return 1 if the input is indivisible by the number below it? WONT WORK
 - - that'd return the same thing at the "3" input for both 29 (prime) and 30 (not prime)
 
+TURNS OUT YOU CAN MAKE STATIC (sub) FUNCTIONS
+
+sqrt subfunction will just skim values until squaring one equals the input request. 
+if wrong, return result of itself(base,testMeAsRoot - 1)
+if correcet, return testMeAsRoot
+
