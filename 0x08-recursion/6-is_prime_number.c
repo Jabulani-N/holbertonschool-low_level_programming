@@ -72,7 +72,7 @@ int  _prime(int x, int numInQuestion)
 		return (0);/*no re*/
 	}
 	else if (x  < numInQuestion)
-		return (_prime (x + 1, numInQuestion));
+		return (_prime(x + 1, numInQuestion));
 		/*just try the next number*/
 	/*failsafe return.*/
 return (1);
