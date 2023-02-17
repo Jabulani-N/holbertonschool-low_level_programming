@@ -70,7 +70,7 @@ int  _prime(int x, int numInQuestion)
 	/*	2 because 1 is a useless factor*/
 		return (0);/*no re*/
 	}
-	else if (x  < numInQuestion && x * y < numInQuestion)
+	else if (x  < numInQuestion)
 		return(_prime(x + 1, numInQuestion));
 		/*just try the next number*/
 	/*failsafe return.*/
