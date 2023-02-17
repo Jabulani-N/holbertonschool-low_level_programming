@@ -19,9 +19,9 @@
 
 int is_prime_number(int n)
 {
-	if (n > 0)/*is valid input*/
+	if (n > 1)/*is valid input*/
 	{
-		return (_prime(1, 1, n));/*pass buck to subfunction*/
+		return (_prime(2, 2, n));/*pass buck to subfunction*/
 	}
 	else /*forgone conclusion*/
 		return (0);
@@ -30,8 +30,8 @@ int is_prime_number(int n)
 /**
  * _prime - checks if current input is square root
  *	if so, returns it. if not, checks one number lower.
- * @x: poorential component of numInQuestion
- * @y: potential component of numInQuestion
+ * @x: poorential factor of numInQuestion
+ * @y: potential factor of numInQuestion
  * @numInQuestion: test if she's a prime
  *	or a mere training frame
  *
@@ -41,31 +41,42 @@ int is_prime_number(int n)
  **/
 
 int  _prime(int x, int y, int numInQuestion)
-{
-	if ((x * y) == numInQusetion) /*if it hit the num, gg*/
-	{
 	/*
-	* counting up from double 1's,
-	*	after the int overflow fiasco of Task 5
-	*/
+	 * check to make sure the  product is below num in question
+	 *	so we don't break integer limit
+	 *		...again.
+	 */
+{
+	if ((x * y) == numInQuestion) /*if it hit the num, gg*/
+	{
+	/* counting up from double 2, after int overflow fiasco of Task 5*/
+	/*	2 because 1 is a useless factor*/
 		return (0);/*no re*/
 	}
-	else if (x  < numInQuestion)/*x is still able to contend*/
+	else if (x  < numInQuestion && x * y < numInQuestion)/*x still viable*/
+		/*
+		* && x has not passed relevant products for this y
+		* this clause protects int limit
+		*/
 		return (_prime(x + 1, y, numInQuestion));
 	else if (y < numInQuestion)
 	{
 /*
  *	we wanna try every x value for the next y value.
  *	the recursed summoning will handle increasing x for us.
- *		we don't have to increase it here
- *		That means start at x=1 again.
+ *		we don't have to increase it here. That means start at x=2 again.
+ *int limit is protected by the instant result of sending values too fat
+ *		being a bounce form this function's first check with x * y when judging
  */
-		return (_prime(1, y + 1, numInQuestion));
+		if (y * 2 <= numInQuestion)
+			return (_prime(2, y + 1, numInQuestion));
+		 /*sending 2 as x is fine because it will try 3,4,etc as x anyway.*/
+		 /*y will eventually get too big and keep sending for new y values timse 2*/
+		 /*so we do a check*/
+		 /*		if y*2 is too fat, it's already past the point of relevance*/
+		return (1);/*implied else (don't have the lines)in the case, return prime*/
 	}
-	else
-/*	both x and y are spent. only a Prime could be this strong*/
-	{
-		return (1);
-	}
-
+/*both x and y are spent. only a Prime could be this strong*/
+	/*else is implied.*/
+return (1);
 }
