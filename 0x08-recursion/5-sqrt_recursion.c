@@ -45,7 +45,7 @@ int _sqrt_recursion(int n)
  *freshly brewed code. hand-typed.
  **/
 
-int  _sqrt_recursion_sub(base, rootTest)
+int  _sqrt_recursion_sub(int base, int rootTest)
 {
 if ((rootTest *rootTest) == base) /*if it's square, gg*/
 	return (rootTest);/*no re*/
