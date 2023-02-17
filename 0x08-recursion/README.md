@@ -26,6 +26,11 @@ if correcet, return testMeAsRoot
 
 
 prime number testing.
-basiocally for 5, test 1 times every number up to 5, then 2 times ever number up too 5, and so on until we either get 5, or get (5-1) * (5-1), as adding one to either makes us hit 5 * 1 proves its prime
+basiocally or 5, test 1 times every number up to 5, then 2 times ever number up too 5, and so on until we either get 5, or get (5-1) * (5-1), as adding one to either makes us hit 5 * 1 proves its prime
+- yea so that leads to tons of segmentation faults for using toom uch memory on evaluating if things amtch
 
+just spam potential dividends and check for a remainder of 0.
+if we get it, it was divisible, and we ret 0
+if not and we hit the number or more, return 1
+infact, if we dividednt we test is equal to or more than the number, we cna go ahead and say its prime cauese we hit limit
 
