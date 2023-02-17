@@ -21,7 +21,7 @@ int _sqrt_recursion(int n)
 {
 	if (n > 0)/*is valid input*/
 	{
-		return (_sqrt_recursion_sub(n, n));/*pass buck to subfunction*/
+		return (_sqrt_recursion_sub(n, 1));/*pass buck to subfunction*/
 	}
 	else if (n == 0) /*forgone conclusion*/
 		/*
@@ -47,10 +47,15 @@ int _sqrt_recursion(int n)
 
 int  _sqrt_recursion_sub(int base, int rootTest)
 {
-if ((rootTest *rootTest) == base) /*if it's square, gg*/
+if ((rootTest * rootTest) == base) /*if it's square, gg*/
+	/*
+	 * counting from base breaks the integer limit
+	 * if base is higher than square root of integer limit.
+	 * count up from 1 or 0 instead, as initial input from parent function
+	 */
 	return (rootTest);/*no re*/
-else if (rootTest < 0)/*base has no natural root, so it dipped below zero*/
+else if (rootTest >= base)/*base has no natural root, so it rose up to base*/
 	return (-1);
 else
-	return (_sqrt_recursion_sub(base, (rootTest - 1)));
+	return (_sqrt_recursion_sub(base, (rootTest + 1)));
 }
