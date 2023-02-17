@@ -31,7 +31,8 @@ void _print_rev_recursion(char *s)
 		 */
 	}
 /*
- * there is a newline included in the string this time, so I don't need to add this one
+ *there is a newline included in the string this time,
+ so I don't need to add this one below
  * else
 		_putchar('\n');
 */
