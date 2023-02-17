@@ -22,4 +22,10 @@ TURNS OUT YOU CAN MAKE STATIC (sub) FUNCTIONS
 sqrt subfunction will just skim values until squaring one equals the input request. 
 if wrong, return result of itself(base,testMeAsRoot - 1)
 if correcet, return testMeAsRoot
+- this worked, but had to count starting at 1 and hten go up to base as limit, as starting at base and counting down resulted in breaking int limit of 2^32 if the input was more than the 2^16 becasue I tested by squaring input. this way the product of internal tests will neer be above base input.
+
+
+prime number testing.
+basiocally for 5, test 1 times every number up to 5, then 2 times ever number up too 5, and so on until we either get 5, or get (5-1) * (5-1), as adding one to either makes us hit 5 * 1 proves its prime
+
 
