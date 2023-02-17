@@ -24,7 +24,7 @@ int _strlen_recursion(char *s)
 {
 	if (*s)/*there is still some left to work with*/
 	{
-		return (1 + _print_strlen_recursion(s + 1));/*recurse*/
+		return (1 + _strlen_recursion(s + 1));/*recurse*/
 			/*
 			 * shoves the next character into the same function.
 			 * if there are more characters, it'll add one to the return
