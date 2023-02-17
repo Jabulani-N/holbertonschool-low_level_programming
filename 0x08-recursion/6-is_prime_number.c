@@ -41,12 +41,13 @@ int is_prime_number(int n)
  *freshly brewed code. hand-typed.
  * yea it was until my approach tunred into tons of segmentation faults
  * 	on masive numbers to test
- * 	kept getting core dump
- * 	likely an issue of running too many computations
- * 	or overflowing int limit
+ *	kept getting core dump
+ *	likely an issue of running too many computations
+ *	or overflowing int limit
  *
  *got idea of testing for remainder of 0 from another
- *this lack of creativity in realiszing 
+ *repo.
+ *this lack of creativity in realiszing
  *i need to take alternate approach is
  *potential problem
  *Genuinely disappointed in myself for not realizing
@@ -71,7 +72,7 @@ int  _prime(int x, int numInQuestion)
 		return (0);/*no re*/
 	}
 	else if (x  < numInQuestion)
-		return(_prime(x + 1, numInQuestion));
+		return(_prime (x + 1, numInQuestion));
 		/*just try the next number*/
 	/*failsafe return.*/
 return (1);
