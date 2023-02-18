@@ -1,8 +1,4 @@
-
-#include <unistd.h>
 #include "main.h"
-#include "stdio.h"
-
 /**
  *_puts - shove string into _putchar
  * A string is an array of characters
