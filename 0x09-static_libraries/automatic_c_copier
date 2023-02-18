@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# copies all .c files in adjacent directories into current directory. Does not overwrite anything.
+
+cp -vnr ../*/*.c ./ -H
