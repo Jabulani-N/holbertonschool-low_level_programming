@@ -1,6 +1,3 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
 #include <unistd.h>
 #include "main.h"
 /*including main.h makes it scan main.h, & include all functions within*/
