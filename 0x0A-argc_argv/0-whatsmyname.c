@@ -14,7 +14,10 @@
  */
 int main(int argc, char *argv[])
 {
-	(void) argc;/*is this void because no input?*/
+	(void) argc;
+/*we did not forget argc. we choose not to use*/
+	/*main must begin with an int argument if any.*/
+	/*will only take 0 or 2 args. this allows taking 2*/
 	printf("%s\n", argv[0]);
 	return (0);
 }
