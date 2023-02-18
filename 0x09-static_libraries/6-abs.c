@@ -1,4 +1,3 @@
-#include <unistd.h>
 #include "main.h"
 /*including main.h makes it scan main.h, & include all functions within*/
 /*within main.h is a list of every function my functions will call*/
