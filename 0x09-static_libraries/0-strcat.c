@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * *_strcat - content of a destination
  * replaces the terminating '\0' from *dest and repalces it with *src

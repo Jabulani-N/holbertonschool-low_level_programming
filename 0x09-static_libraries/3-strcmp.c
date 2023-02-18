@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  * _strcmp - compare two strings and say whose bigger
  * tells via returning an integer

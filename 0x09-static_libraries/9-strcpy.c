@@ -5,5 +5,6 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	return('0');
+	char j = 'j';
+	return(0);
 }
