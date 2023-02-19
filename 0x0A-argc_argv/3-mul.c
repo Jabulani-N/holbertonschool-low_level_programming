@@ -4,8 +4,8 @@
 
 /**
  * main - check ifi 2 input args (argsc=3)
- * 	if so, multiply
- * 	if not, say 'error'
+ *	if so, multiply
+ *	if not, say 'error'
  *
  * argv[0] is function name. later positions have arguments made
  *
@@ -17,7 +17,7 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc == 3 )
+	if (argc == 3)
 	{
 		printf("%d\n", (atoi(argv[1]) * atoi(argv[2])));
 		argv++;
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		printf("Error\n");
-		return(1);
+		return (1);
 	}
 	return (0);
 }
