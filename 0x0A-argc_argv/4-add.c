@@ -20,6 +20,7 @@
 int main(int argc, char *argv[])
 {
 	int heap = 0, i, j;/*the sum, a counter, a counter*/
+	/*it is important to remember to initialize heap*/
 	j = argc;
 
 	while (j-- > 1)/*0 breaks it*/
@@ -27,13 +28,13 @@ int main(int argc, char *argv[])
 		/*argument level. whole string*/
 	{
 		/*about to check it's digits*/
-		for (i =0; argv[j][i]/*while this is valid*/;i++)
+		for (i = 0; argv[j][i]/*while this is valid*/; i++)
 		/*single character level of an argument*/
 		{
 			if (!(isdigit(argv[j][i])))
 			{
 				printf("Error\n");
-				return(1);
+				return (1);
 			}
 		}
 		heap = (heap + atoi(argv[j]));
