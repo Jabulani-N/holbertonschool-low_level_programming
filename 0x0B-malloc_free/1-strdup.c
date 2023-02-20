@@ -31,26 +31,24 @@
 
 char *_strdup(char *str)
 {
-	unsigned int size;
+	unsigned int size = 0;
 	unsigned int magicalIndex = 0;/*for safety's sake*/
 	/*will be multi-use, so BE SURE TO RESET*/
 	char *preallocated;
 	/*pointer so base can be an address*/
 
-
-        if (str == NULL)
-		                return (str);
+	if (str == NULL)
+		return (str);
 	        /*
 		 * returns null if pointer was to null
 		 *redundancy?
 		 */
-
 /*establish size of str*/
 	/*in c, string is 1D char array*/
 	for (magicalIndex = 0; str[magicalIndex] != '\0'; magicalIndex++)
 		size = magicalIndex;
 
-	preallocated = malloc(size * sizeof(char));
+	preallocated = malloc(magicalIndex * sizeof(char));
 	/*preallocated has become a pointer to the allocated memory*/
 	/*it seems to have also kept the char trait.*/
 
