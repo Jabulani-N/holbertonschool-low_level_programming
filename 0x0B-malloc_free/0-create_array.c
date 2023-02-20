@@ -24,7 +24,7 @@
 
 char *create_array(unsigned int size, char c)
 {
-	unsigned int index;
+	unsigned int index = 0;
 	char *preallocated;
 	/*pointer so base can be an address*/
 	preallocated = malloc(size * sizeof(c));
@@ -36,7 +36,7 @@ char *create_array(unsigned int size, char c)
 	 */
 
 	if (preallocated == NULL)
-		return (NULL);
+		return (preallocated);
 	/*
 	 * returns null if pointer was to null
 	 * I guess this is a redundancy?
