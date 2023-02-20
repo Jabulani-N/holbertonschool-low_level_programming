@@ -37,6 +37,14 @@ char *_strdup(char *str)
 	char *preallocated;
 	/*pointer so base can be an address*/
 
+
+        if (str == NULL)
+		                return (str);
+	        /*
+		 * returns null if pointer was to null
+		 *redundancy?
+		 */
+
 /*establish size of str*/
 	/*in c, string is 1D char array*/
 	for (magicalIndex = 0; str[magicalIndex] != '\0'; magicalIndex++)
@@ -46,12 +54,6 @@ char *_strdup(char *str)
 	/*preallocated has become a pointer to the allocated memory*/
 	/*it seems to have also kept the char trait.*/
 
-	if (str == NULL)
-		return (str);
-	/*
-	 * returns null if pointer was to null
-	 * I guess this is a redundancy?
-	 */
 	if (size == 0)
 		return (NULL);
 	/*return null if size 0 (useless array)*/
