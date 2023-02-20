@@ -2,7 +2,9 @@
  * We have to malloc the space we're gonna use. when you memory allocate (malloc), it'll return a pointer to where that memory is.
  * 
  */
-
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * create_array - preallocates memory, and then makes an array
  * 	if the size requested is 0: allocate null, return null
@@ -16,6 +18,7 @@
 
 char *create_array(unsigned int size, char c)
 {
+	unsigned int index;
 	char *preallocated;
 	/*pointer so base can be an address*/
 	preallocated = malloc(size * sizeof(char));
@@ -42,10 +45,11 @@ char *create_array(unsigned int size, char c)
   */
 
 /*so now that we know the target and array will be valid...*/
-	while (size-- >= 1)
+	while (index < size)
 	{
-		preallocated[size - 1] = c;
+		preallocated[index] = c;
 		/*shoves requested char into place*/
+		index++;
 	}
 	return(preallocated);
 }
