@@ -40,14 +40,14 @@ char *_strdup(char *str)
 /*establish size of str*/
 	/*in c, string is 1D char array*/
 	for (magicalIndex = 0; str[magicalIndex] != '\0'; magicalIndex++)
-		size = magicalIndex++;
+		size = magicalIndex;
 
 	preallocated = malloc(size * sizeof(char));
 	/*preallocated has become a pointer to the allocated memory*/
 	/*it seems to have also kept the char trait.*/
 
-	if (preallocated == NULL)
-		return (preallocated);
+	if (str == NULL)
+		return (str);
 	/*
 	 * returns null if pointer was to null
 	 * I guess this is a redundancy?
