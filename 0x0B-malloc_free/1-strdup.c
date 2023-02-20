@@ -42,7 +42,7 @@ char *_strdup(char *str)
 /*establish size of str*/
 	/*in c, string is 1D char array*/
 	while(str[magicalIndex] != '\0')
-		       	magicalIndex++
+		       	magicalIndex++;
 	preallocated = malloc((magicalIndex + 1) * sizeof(char));
 	/*+1 makes it include the slot for terminating NULL*/
 	/*preallocated has become a pointer to the allocated memory*/
