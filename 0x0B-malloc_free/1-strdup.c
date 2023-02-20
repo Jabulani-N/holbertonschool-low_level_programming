@@ -49,9 +49,9 @@ char *_strdup(char *str)
 	/*preallocated has become a pointer to the allocated memory*/
 	/*it seems to have also kept the char trait.*/
 	if (preallocated == NULL)
-		return(NULL);/*catch malloc errors*/
-	if (size == 0)
-		return (NULL);
+		return (NULL);/*catch malloc errors*/
+/*	if (size == 0)*//*don't care if size is 0*/
+/*		return (NULL);*/
 	/*return null if size 0 (useless array)*/
 /*so now that we know the target and array will be valid...*/
 	/*reset index*/
