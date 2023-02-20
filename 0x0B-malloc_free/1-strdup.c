@@ -31,7 +31,6 @@
 
 char *_strdup(char *str)
 {
-	unsigned int size = 0;
 	unsigned int magicalIndex = 0;/*for safety's sake*/
 	/*will be multi-use, so BE SURE TO RESET*/
 	char *preallocated;
@@ -42,8 +41,8 @@ char *_strdup(char *str)
 		/*returns null if pointer was to null*/
 /*establish size of str*/
 	/*in c, string is 1D char array*/
-	for (magicalIndex = 0; str[magicalIndex] != '\0'; magicalIndex++)
-		size = magicalIndex;
+	while(str[magicalIndex] != '\0')
+		       	magicalIndex++
 	preallocated = malloc((magicalIndex + 1) * sizeof(char));
 	/*+1 makes it include the slot for terminating NULL*/
 	/*preallocated has become a pointer to the allocated memory*/
