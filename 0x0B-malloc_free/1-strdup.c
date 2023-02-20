@@ -39,26 +39,22 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (str);
-	        /*
-		 * returns null if pointer was to null
-		 *redundancy?
-		 */
+		/*
+		* returns null if pointer was to null
+		*/
 /*establish size of str*/
 	/*in c, string is 1D char array*/
 	for (magicalIndex = 0; str[magicalIndex] != '\0'; magicalIndex++)
 		size = magicalIndex;
 
-	preallocated = malloc(magicalIndex * sizeof(char));
+	preallocated = malloc((magicalIndex + 1) * sizeof(char));
+	/*+1 makes it include the slot for terminating NULL*/
 	/*preallocated has become a pointer to the allocated memory*/
 	/*it seems to have also kept the char trait.*/
 
 	if (size == 0)
 		return (NULL);
 	/*return null if size 0 (useless array)*/
- /*
-  * beause that'd make the only content null,
-  *	but wouldn't that'd make preallocated null?
-  */
 
 /*so now that we know the target and array will be valid...*/
 	/*reset index*/
