@@ -17,3 +17,4 @@ it looks like this first task is essentially to make a 1Dimension array of the g
 We have to malloc the space we're gonna use. when you memory allocate (malloc), it'll return a pointer to where that memory is.
 
 01
+same as 00, but after allocating, make it scan through the string provied and shove it into the target memory
