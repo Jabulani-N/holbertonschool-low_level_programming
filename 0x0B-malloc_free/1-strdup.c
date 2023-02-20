@@ -48,7 +48,7 @@ char *_strdup(char *str)
 	/*+1 makes it include the slot for terminating NULL*/
 	/*preallocated has become a pointer to the allocated memory*/
 	/*it seems to have also kept the char trait.*/
-	if preallocated == NULL
+	if (preallocated == NULL)
 		return(NULL);/*catch malloc errors*/
 	if (size == 0)
 		return (NULL);
