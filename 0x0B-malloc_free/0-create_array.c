@@ -27,7 +27,7 @@ char *create_array(unsigned int size, char c)
 	unsigned int index;
 	char *preallocated;
 	/*pointer so base can be an address*/
-	preallocated = malloc(size * sizeof(char));
+	preallocated = malloc(size * sizeof(c));
 	/*preallocated has become a pointer to the allocated memory*/
 	/*
 	 * it seems to have also kept the char trait,
@@ -36,7 +36,7 @@ char *create_array(unsigned int size, char c)
 	 */
 
 	if (preallocated == NULL)
-		return (preallocated);
+		return (NULL);
 	/*
 	 * returns null if pointer was to null
 	 * I guess this is a redundancy?
