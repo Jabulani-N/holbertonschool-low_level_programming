@@ -31,15 +31,16 @@
 
 char *_strdup(char *str)
 {
-	int size;
-	unsigned int index = 0;/*for safety's sake*/
+	unsigned int size;
+	unsigned int magicalIndex = 0;/*for safety's sake*/
+	/*will be multi-use, so BE SURE TO RESET*/
 	char *preallocated;
 	/*pointer so base can be an address*/
 
 /*establish size of str*/
 	/*in c, string is 1D char array*/
-	for (index = 0; str[index] != '\0'; index++)
-		size = index++;
+	for (magicalIndex = 0; str[magicalIndex] != '\0'; magicalIndex++)
+		size = magicalIndex++;
 
 	preallocated = malloc(size * sizeof(char));
 	/*preallocated has become a pointer to the allocated memory*/
@@ -60,11 +61,13 @@ char *_strdup(char *str)
   */
 
 /*so now that we know the target and array will be valid...*/
-	while (index < size)
+	/*reset index*/
+	magicalIndex = 0;
+	while (str[magicalIndex])
 	{
-		preallocated[index] = str[index];
+		preallocated[magicalIndex] = str[magicalIndex];
 		/*shoves requested char into place*/
-		index++;
+		magicalIndex++;
 	}
 	return (preallocated);
 }
