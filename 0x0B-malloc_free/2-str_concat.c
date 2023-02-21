@@ -55,14 +55,14 @@ char *str_concat(char *s1, char *s2)
 	/*+1 makes it include the slot for terminating NULL*/
 	if (preallocated == NULL)
 		return (NULL);/*catch malloc errors*/
-	/*reset index*/
-	magicalIndex = 0;
+	magicalIndex = 0;/*reset index*/
 	while (s1[magicalIndex])
 	{
 		preallocated[magicalIndex] = s1[magicalIndex];
 		/*shoves requested char into place*/
 		magicalIndex++;
 	} /*we're at the end of s1's content, excluding NULL*/
+	subIndex = 0;/*magicalIndex--;*/
 	while (s2[subIndex])
 	{
 		preallocated[magicalIndex] = s2[subIndex];
