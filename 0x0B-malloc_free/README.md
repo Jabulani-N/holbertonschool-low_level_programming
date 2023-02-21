@@ -18,3 +18,10 @@ We have to malloc the space we're gonna use. when you memory allocate (malloc), 
 
 01
 same as 00, but after allocating, make it scan through the string provied and shove it into the target memory
+
+02
+we can mostly use the code of the duping program, since we're jsut duping two different things.
+we'll need an additional variable to hold the total sizes.
+we can then walk through s1 (change while to be s1 relevant) and then, WITHOUT resetting the Index, walk through s2 to add it to hte heap.
+
+we'll need one index to keep track of our position in the resultantt char[], and one other index to afford us to start at the beginning of s2 when we add it to resultant char[index] 
