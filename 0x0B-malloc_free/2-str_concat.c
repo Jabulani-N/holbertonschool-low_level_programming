@@ -62,12 +62,12 @@ char *str_concat(char *s1, char *s2)
 		preallocated[magicalIndex] = s1[magicalIndex];
 		/*shoves requested char into place*/
 		magicalIndex++;
-	}/*we're at the end of s1's content, excluding NULL*/
+	} /*we're at the end of s1's content, excluding NULL*/
 	while (s2[subIndex])
 	{
 		preallocated[magicalIndex] = s2[subIndex];
 		magicalIndex++;
-		subIndex++
-	}/*it'll prolly end on NULL by default*/
+		subIndex++;
+	} /*it'll prolly end on NULL by default*/
 	return (preallocated);
 }
