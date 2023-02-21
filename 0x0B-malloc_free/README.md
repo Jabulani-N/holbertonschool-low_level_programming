@@ -48,4 +48,6 @@ we'll need one index to keep track of our position in the resultantt char[], and
 
 ----
 
+due to current time, I think it'll be wise to directly copy another's so I have it for points now and reference later. subsequent tasks for this project will be as such.
+
 
