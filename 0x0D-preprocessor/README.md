@@ -51,10 +51,29 @@ Tasks
 ----
 
 
-01
+03, 04
 
+the idea is you have to ifndef from an equivalent of the Header file's title. 
+this way, the include for the file will include the ifndef statement.
 
+Then we have a blank definition for the file's name(in the form we gave teh ifndef)
+this is so everything that has been included gets defined
 
+Now we can actually define the requested macro.
+
+---
+
+(stuff)
+
+-  will return stuff
+
+((condition) ? choice1 : choice2)
+
+- if condition is true, retun choice1.
+
+- if condition is false, return choice2
+
+---
 
 ----
 
