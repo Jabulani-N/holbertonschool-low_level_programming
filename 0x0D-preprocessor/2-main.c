@@ -1,6 +1,7 @@
 /**
- *main - returns the name of the file it will be compiled from
+ * main - returns the name of the file it will be compiled from
  *
+ * Return: success
  */
 #include <stdlib.h>
 #include <stdio.h>
@@ -8,7 +9,7 @@
 int main(void)
 {
 
-	printf("%s\n",__FILE__);/*__FILE__ is a predefined macro*/
+	printf("%s\n", __FILE__);/*__FILE__ is a predefined macro*/
 	/*it expands into the name of the current inputfile*/
 	/*name as in "whole entire address"*/
 	/*
@@ -19,8 +20,10 @@ int main(void)
 	 */
 /*
  * further reading at
- * https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros
+ * https://gcc.gnu.org/onlinedocs/gcc-5.1.0
+ * /cpp/Standard-Predefined-Macro
+ * s.html#Standard-Predefined-Macros
  */
-	return(EXIT_SUCCESS);
+	return (EXIT_SUCCESS);
 }
 
