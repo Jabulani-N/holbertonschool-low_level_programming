@@ -49,6 +49,7 @@ Tasks
 
 
 ----
+---
 
 
 03, 04
@@ -76,10 +77,5 @@ Now we can actually define the requested macro.
 ---
 
 ----
-
-02
-
-
----
 
 
