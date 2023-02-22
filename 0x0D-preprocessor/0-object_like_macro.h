@@ -3,7 +3,7 @@
  * I wonder why making C macros is easier than making keyboard macros...
  *
  */
-#ifndef HEADER_H
+#ifndef SIZE
 
 #define SIZE 1024
 
