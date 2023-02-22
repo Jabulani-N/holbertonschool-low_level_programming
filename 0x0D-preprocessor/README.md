@@ -8,6 +8,8 @@ req 1: file exist
 req 2: readme exist
 req 3: file runnable/compilable
 
+----
+
 object-like macros are very similar to variables, but instead of holding a data type, they hold a literal line of code.
 for example, if I
 
@@ -21,6 +23,8 @@ for the code to see
 
 int x[] = {1, 2, 3};
 
+
+
 In fact, you could even
 
 #define EXAMPLE_OBJECT 1, 2, 3}
@@ -29,7 +33,7 @@ and then say
 
 int x[] = {EXAMPLEOBJECT;
 
-and the code would see the exact same thing, because the close bracket is in the macro.
+and the code would see the exact same thing, because the close bracket is inside the macro.
 
 A macro can redefine a variable, and it can also include a variable or another macro, but this is jsut asking for trouble.
 
@@ -41,10 +45,13 @@ Tasks
 
 00
 
-/*
-*any content  should be in the ifndif to dodge double include.
-*this ifndif and endif is called an "include guard"
-*/
+
+any content  should be in the ifndif to dodge double include.
+this ifndif and endif is called an "include guard"
+
+- If you don't, Betty will slap you.
+
+- - Also if you comment in your .h file, Betty will also slap you.
 
 
 
@@ -55,14 +62,17 @@ Tasks
 03, 04
 
 the idea is you have to ifndef from an equivalent of the Header file's title. 
-this way, the include for the file will include the ifndef statement.
+this way, the include for the .h file will include the ifndef statement.
 
-Then we have a blank definition for the file's name(in the form we gave teh ifndef)
-this is so everything that has been included gets defined
+Then we have a blank definition for the .h file's name(in the form we gave teh ifndef)
+this is so everything that has been included gets defined.
 
-Now we can actually define the requested macro.
+You have to replace special characters, like "3-" or "." with underscore _
+
+Now we can actually define the requested macro function underneath that.
 
 
+__Function-like Macro Return__
 
 (stuff)
 
