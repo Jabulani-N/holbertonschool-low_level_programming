@@ -8,7 +8,7 @@
 int main(void)
 {
 
-	printf("__FILE__\n");/*__FILE__ is a predefined macro*/
+	printf("%s\n",__FILE__);/*__FILE__ is a predefined macro*/
 	/*it expands into the name of the current inputfile*/
 	/*name as in "whole entire address"*/
 	/*
