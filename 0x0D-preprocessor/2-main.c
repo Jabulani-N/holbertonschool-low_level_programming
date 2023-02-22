@@ -20,6 +20,6 @@ int main(void)
  * further reading at
  * https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros
  */
-	return(EXIT_SUCCESS);
+	return(0);
 }
 
