@@ -16,10 +16,11 @@ int main(void)
 	 * these lines in this file while it is reading this file,
 	 * that essnetially means
 	 * "name/address of this file we humans are reading right now"
+	 */
 /*
  * further reading at
  * https://gcc.gnu.org/onlinedocs/gcc-5.1.0/cpp/Standard-Predefined-Macros.html#Standard-Predefined-Macros
  */
-	return(0);
+	return(EXIT_SUCCESS);
 }
 
