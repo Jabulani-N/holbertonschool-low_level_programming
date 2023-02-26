@@ -37,7 +37,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		pointout[index] = s1[index];
 		index++;
 	}
-	while (subIndex <= n - 1)
+	while (subIndex < n)
 		pointout[index++] = s2[subIndex++];
 		/*all necesarry slots filled*/
 	pointout[strlen(s1) + n] = '\0';/*NULL last slot*/
