@@ -2,7 +2,7 @@
  *malloc_checked - returns the pointer from malloc,
  *
  *@b: how much to malloc
- *Return: if successful, the new pointer. else, 98
+ *Return: if successful, the new pointer. else, exit(98)
  *
  */
 #include "main.h"
