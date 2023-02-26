@@ -5,14 +5,16 @@
  *Return: if successful, the new pointer. else, 98
  *
  */
-
+#include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 void *malloc_checked(unsigned int b)
 {
 	char *point;
 
-	*point = malloc(b);
+	point = malloc(b);
 	if (!(point))
-		return(98);
-	return(*point);
+		exit (98);
+	return (point);
 }
 
