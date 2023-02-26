@@ -29,6 +29,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	else if (n > strlen(s2))
 		n = strlen(s2);
 	pointout = malloc(strlen(s1) + n + 1);/*allocate. +1 = termi-NULL*/
+	pointout[0] = '\0';/*initialize 0th index*/
 	if (!(pointout))/*fail safe*/
 		return (NULL);
 	while (s1[index])
