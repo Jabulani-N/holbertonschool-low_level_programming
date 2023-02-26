@@ -12,10 +12,11 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *pointout;/*this guy'll hold the concatonated string*/
-	int index = 0, subIndex = 0;
+	unsigned int index = 0, subIndex = 0;
 	
 	if (s1 == NULL)
 		s1 = "";
@@ -31,7 +32,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (!(pointout))/*fail safe*/
 		return (NULL);
 	while (s1[index])
-		pointout[index] = s1[index++];
+	{
+		pointout[index] = s1[index];
+		index++;
+	}
 	while (subIndex <= n)
 		pointout[index++] = s2[subIndex++];
 		/*all necesarry slots filled*/
