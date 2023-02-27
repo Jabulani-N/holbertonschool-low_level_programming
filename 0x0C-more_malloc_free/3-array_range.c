@@ -21,7 +21,6 @@
 int *array_range(int min, int max)
 {
 	int *pointout;/*this guy'll hold the concatonated string*/
-	int *UQHolder;/*will hold the original content of pointout*/
 	int index = 0;
 
 	if (min > max)
@@ -41,7 +40,6 @@ int *array_range(int min, int max)
 	if (!(pointout))
 		return (NULL);
 
-	UQHolder = pointout;
 	while (pointout[index])
 	{
 		pointout[index] = (min + index);

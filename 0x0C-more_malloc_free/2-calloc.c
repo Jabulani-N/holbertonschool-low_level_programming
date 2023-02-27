@@ -19,7 +19,6 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *pointout;/*this guy'll hold the concatonated string*/
-	char *UQHolder;/*will hold the original content of pointout*/
 	unsigned int index = 0;
 
 	if (nmemb == 0 || size == 0)
@@ -29,7 +28,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (!(pointout))
 		return (NULL);
 
-	UQHolder = pointout;
 	while (index < size)
 	{
 		pointout[index] = 0;
