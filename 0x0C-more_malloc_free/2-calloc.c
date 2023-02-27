@@ -18,7 +18,7 @@
 #include <string.h>
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *pointout;/*this guy'll hold the concatonated string*/
+	int *pointout;/*this guy'll hold the created 0 array*/
 	unsigned int index = 0;
 
 	if (nmemb == 0 || size == 0)

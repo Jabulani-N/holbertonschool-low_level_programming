@@ -33,6 +33,7 @@
  * if mallco fails, return NULL
  *
  * structure copied from Task2
+ * 	the verion before I copied Task3 into Task2
  */
 #include "main.h"
 #include <stdlib.h>
@@ -82,6 +83,7 @@ int *array_range(int min, int max)
  * Segmentatoin fault(core dumped) if min is greater than max
  *- that's an issue with example main. our code is fine
  *
+ * 				FALSE ALARM
  *		MAKE SURE THE ADDRESS IS ACTUALY FAULTY
  * faulty addresses are utilized if min is less than 0
  * - this may in part be due to

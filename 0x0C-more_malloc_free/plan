@@ -3,4 +3,9 @@ compare the outputs, and see what differences may have caused them
 
 in particular, test them with the negative minimum.
 
+turns out the addresses were not faulty, and in fact my code was already completely functoinal.
+I tested this by copying someone else's pproject and checking their memory allocation and seeing it was the same as what I already had.
+	- It looks like just haivng more that 10 mem slots turns into getting weirdly named memory locations
+
+
 
