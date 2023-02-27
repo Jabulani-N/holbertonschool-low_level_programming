@@ -82,12 +82,12 @@ int *array_range(int min, int max)
  * Segmentatoin fault(core dumped) if min is greater than max
  *- that's an issue with example main. our code is fine
  *
- * 		MAKE SURE THE ADDRESS IS ACTUALY FAULTY
+ *		MAKE SURE THE ADDRESS IS ACTUALY FAULTY
  * faulty addresses are utilized if min is less than 0
  * - this may in part be due to
- *   	attempting to edit negative array positions during while loop
+ *	attempting to edit negative array positions during while loop
  *- - consider making placeholder variable to hold the diff,
- 	and hten always work between slot 0 and the difference
+ *	and hten always work between slot 0 and the difference
  *
  *		FIXED
  *while loop for while(*pointout) never runs
