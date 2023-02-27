@@ -1,0 +1,6 @@
+it may be wise to bakcup current state, test another's work. perhaps more than one.
+compare the outputs, and see what differences may have caused them
+
+in particular, test them with the negative minimum.
+
+
