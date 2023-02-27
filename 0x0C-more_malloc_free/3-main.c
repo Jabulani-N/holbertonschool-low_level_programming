@@ -40,7 +40,26 @@ int main(void)
 {
   int *a;
 
+  printf("0 to 10\n");
   a = array_range(0, 10);
+  simple_print_buffer(a, 11);
+  free(a);
+
+
+  printf("-10 to 10\n");
+  simple_print_buffer(a, 21);
+  a = array_range(-10, 10);
+  simple_print_buffer(a, 21);
+  free(a);
+
+  printf("11 to 11\n");
+  a = array_range(11, 11);
+  simple_print_buffer(a, 11);
+  free(a);
+
+  printf("10 to 0\n");
+  a = array_range(10, 0);
+  printf("array_range has finished acting.\nwe are back in main\n");
   simple_print_buffer(a, 11);
   free(a);
   return (0);

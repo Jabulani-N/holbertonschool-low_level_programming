@@ -46,14 +46,17 @@ int *array_range(int min, int max)
 
 	/*	printf("I've begun\n");*/
 	if (min > max)
+	{
+/*		printf("min was greater than max\n");*/
 		return (NULL);
+	}
 	if (min == max)
 	{
 		pointout = malloc(sizeof(int));
 		if (!(pointout))
 			return (NULL);
 		pointout[0] = min;
-		pointout[1] = '\0';
+/*		pointout[1] = '\0';*/
 		return (pointout);
 	} /*all max !> min cases are caught*/
 	pointout = malloc(sizeof(int) * (1 + (max - min)));
@@ -61,7 +64,7 @@ int *array_range(int min, int max)
 		return (NULL);
 	UQHolder = pointout;
 /*	printf("im about to begin the while loop's code declaration\n");*/
-	while (index <= (max - min))
+	while (index < (max - min))
 	{
 /*		printf("im in while loop. index is %d\n",index);*/
 		pointout[index] = (min + index);
@@ -69,13 +72,25 @@ int *array_range(int min, int max)
 		index++;
 	}
 	pointout = UQHolder;/*put address back where it belongs*/
-	pointout[index] = '\0';/*NULL last slot*/
+/*	pointout[index] = '\0';*//*NULL last slot*/
 	return (pointout);
 }
 
 /*
  * known bugs
- *	while loop for while(*pointout) never runs
+ *		FALSE ALARM
+ * Segmentatoin fault(core dumped) if min is greater than max
+ *- that's an issue with example main. our code is fine
+ *
+ * 		MAKE SURE THE ADDRESS IS ACTUALY FAULTY
+ * faulty addresses are utilized if min is less than 0
+ * - this may in part be due to
+ *   	attempting to edit negative array positions during while loop
+ *- - consider making placeholder variable to hold the diff,
+ 	and hten always work between slot 0 and the difference
+ *
+ *		FIXED
+ *while loop for while(*pointout) never runs
  *		*pointout is never not NULL directly after allocation
  *	- try mkaing it count to a specific index number instead
  *
