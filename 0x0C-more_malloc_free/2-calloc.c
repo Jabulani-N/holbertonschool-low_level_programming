@@ -18,7 +18,7 @@
 #include <string.h>
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *pointout;/*this guy'll hold the created 0 array*/
+	char *pointout;/*this guy'll hold the created 0 array*/
 	unsigned int index = 0;
 
 	if (nmemb == 0 || size == 0)
@@ -28,7 +28,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	if (!(pointout))
 		return (NULL);
 
-	while (index < size)
+	while (index < (size * nmemb))
 	{
 		pointout[index] = 0;
 		index++;
