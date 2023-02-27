@@ -19,10 +19,6 @@ I probably just don't have a proper case for if the fist input is NULL, or '\0'.
 
 - - if that fails, consider rewriting from ground up but using length variables
 
- - - it wasn't due to having empty first string. just go at it from the top
-
-
-
 ----
 
 
