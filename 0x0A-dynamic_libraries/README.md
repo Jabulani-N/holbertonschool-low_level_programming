@@ -27,4 +27,34 @@ gcc - program used
 
 ----
 
+#blog
+
+# - Title
+
+- Library Mechanics: Statics and Dynamics
+
+
+#Blog Body Content
+
+must contain
+
+- Why and when libraries should be used
+
+- How to create a static library (in Linux)
+
+- How to use a static library to create a program (in Linux)
+
+- How to create a dynamic library (in Linux)
+
+- How to use a dynamic library to create a program (in Linux)
+
+- What are the differences between static and shared libraries
+
+- What is the environmental variable $LD_LIBRARY_PATH and how do you use it
+
+
+#might mention
+
+be sure to make any scripts that create libararies executable when you want to run them.
+
 
