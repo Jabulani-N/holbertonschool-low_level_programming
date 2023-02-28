@@ -1,0 +1,15 @@
+# Home of Gitter
+
+changes under consideration
+
+- utilize "read -r" to read multi-word inputs and send them to the commit message (the words after the '-m' part)
+
+- -initialize a variable to hold that read result.initialize it empty
+
+- - -  While it is empty,ask user to enter a message, then make that var equal read -r.
+
+- - - - this forces the user to enter a message, and avoid the scary hassle screen that come sup when you try to send no commit message
+
+changelog
+
+
