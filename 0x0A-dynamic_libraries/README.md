@@ -27,11 +27,13 @@ gcc - program used
 
 ----
 
-#blog
+# Blog
 
-# - Title
+#  Title
 
 - Library Mechanics: Statics and Dynamics
+
+- Various Operations In Libraries Explained (V.O.I.L.E.)
 
 
 #Blog Body Content
