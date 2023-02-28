@@ -21,4 +21,10 @@ I probably just don't have a proper case for if the fist input is NULL, or '\0'.
 
 ----
 
+#blog content
+
+Title
+
+- Library Mechanics: Statics and Dynamics
+
 

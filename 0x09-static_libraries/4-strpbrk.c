@@ -12,7 +12,7 @@
  * previous attempts segmentation faulted during while loops
  **/
 
-char *_strchr(char *s, char c)
+char *_strpbrk(char *s, char c)
 {
 	while (*s) /*should safely go through s's content*/
 	{
