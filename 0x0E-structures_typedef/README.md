@@ -34,6 +34,7 @@ struct exampleStruct - description of exmapleStruct
 
 @examplevar1: description of relevant varaible examplevar1
 
+Description: optional really long description
 ................
 
 for th estructure and it's varaibles (don't have to put them adjacent, probably)
