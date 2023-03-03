@@ -24,7 +24,7 @@
  *		by messing with *d.element = elementContent
  *
  * I do not want to declare d, because d aleady exists.
- * 	I only want to edit d's elements
+ *	I only want to edit d's elements
  *
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
