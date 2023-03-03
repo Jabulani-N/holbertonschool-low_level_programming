@@ -29,6 +29,9 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
+	/*always make sure you can handle nulls*/
+	if (d == NULL)
+		return;
 	/*example of two different ways to access elements*/
 	(*d).name = name;
 	d->owner = owner;
