@@ -54,6 +54,19 @@ Description: optional really long description
 for the structure and it's varaibles (don't have to put them adjacent, probably)
 
 
+#Errors
+
+"variable [pointer to any datatype or structure] may be used uninitialized
+
+ - The item did not spawn in with filled values.
+
+ - - Preallocate the memory with malloc.
+
+ - - - malloc(sizeof([dataType])) is generally a nice brainless way to guarantee initialization
+
+
+#Tasks
+
 task 4: it the firs couple lines in 4-main.c are just declaring my_dog. don't worry about those.
 
 - our function code gets summoned "my_dog = new_dog" line.

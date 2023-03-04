@@ -13,6 +13,7 @@
 #include "dog.h"
 #include "main.h"
 #include <string.h>
+#include <stdlib.h>
 
 
 /*
@@ -20,19 +21,28 @@
  *we get passed info to shove into the new dog
  *
  * we'll make a new dog, and fill it with the appropriate elements
- * after that, we'll return the newly created struct
+ * after that, we'll return the newly created struct's content
  *
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *d;
+	
+	d = malloc(sizeof(dog_t));
+	if (d == NULL)
+		return (NULL);
+
 	/*always make sure you can handle nulls*/
 	if (name == NULL || owner == NULL)
-		return(NULL);
-	dog_t d;
+		return (NULL);
+
 	/*example of two different ways to access elements*/
-	(*d).name = name;
+	d->name = name;
 	d->owner = owner;
 	d->age = age;
+
+	if (d == NULL)
+		return (NULL);
 
 	return(d);
 }
