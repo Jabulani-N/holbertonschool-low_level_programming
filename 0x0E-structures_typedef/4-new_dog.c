@@ -27,7 +27,9 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
-	
+	char *nameCopy = name;
+	char *ownerCopy = owner;
+
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
@@ -37,12 +39,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 
 	/*example of two different ways to access elements*/
-	d->name = name;
-	d->owner = owner;
+	d->name = nameCopy;
+	d->owner = ownerCopy;
 	d->age = age;
 
-	if (d == NULL)
-		return (NULL);
 
 	return(d);
 }
