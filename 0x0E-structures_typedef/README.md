@@ -51,8 +51,24 @@ struct exampleStruct - description of exmapleStruct
 Description: optional really long description
 ................
 
-for th estructure and it's varaibles (don't have to put them adjacent, probably)
+for the structure and it's varaibles (don't have to put them adjacent, probably)
 
+
+task 4: it the firs couple lines in 4-main.c are just declaring my_dog. don't worry about those.
+
+- our function code gets summoned "my_dog = new_dog" line.
+
+- - we just have to take the pointers and shove the parameters into the structure, same as normal
+
+- - - note that we'll have to return a whole dog sructure for it to copy, since we're not recieving any addresses.
+
+Ultimately, we need to create and return a dog structure with the inputted paramters
+
+- likely hangups include formatting the return statement
+
+- - try return(dogStructure) format first, as it makes the most sense
+
+- - - if that fails, consider returning it's address (&), as the function itself is prototyped as a pointer (*)
 
 ----
 
