@@ -60,11 +60,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		ownerCopy[magicalIndex] = owner[magicalIndex];
 		magicalIndex++;
 	} /*always make sure you can handle nulls*/
-	if (name == NULL || owner == NULL)
+/*
+ * if (name == NULL || owner == NULL)
 	{
 		free(d->owner), free(d->name), free(d);
 		return (NULL);
-	} d->name = nameCopy, d->owner = ownerCopy, d->age = age;
+	}*/ d->name = nameCopy, d->owner = ownerCopy, d->age = age;
 	return (d);
+
 }
 
