@@ -26,26 +26,45 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	/*PREALLOCATE AND NULLCHECK YOUR NEW CHAR POINTERS*/
 	dog_t *d;
-	char *nameCopy = name;
-	char *ownerCopy = owner;
+	char *nameCopy, *ownerCopy;
+	int len = 0, magicalIndex = 0;
 
 	d = malloc(sizeof(dog_t));
 	if (d == NULL)
 		return (NULL);
-
-	/*always make sure you can handle nulls*/
-	if (name == NULL || owner == NULL)
+	while (name[len])
+		len++;
+	nameCopy = malloc(sizeof(name) * (len + 1));
+	if (nameCopy == NULL)
+	{
+		free(d);
 		return (NULL);
-
-	/*example of two different ways to access elements*/
-	d->name = nameCopy;
-	d->owner = ownerCopy;
-	d->age = age;
-
-
+	} /*next assign the name, character by character*/
+	while (magicalIndex < len)
+	{
+		nameCopy[magicalIndex] = name[magicalIndex];
+		magicalIndex++;
+	}
+	len = 0, magicalIndex = 0;
+	while (owner[len])
+		len++;
+	ownerCopy = malloc(sizeof(owner) * (len + 1));
+	if (ownerCopy == NULL)
+	{
+		free(d->name), free(d);
+		return (NULL);
+	} /*next assign owner, character by character*/
+	while (magicalIndex < len)
+	{
+		ownerCopy[magicalIndex] = owner[magicalIndex];
+		magicalIndex++;
+	} /*always make sure you can handle nulls*/
+	if (name == NULL || owner == NULL)
+	{
+		free(d->owner), free(d->name), free(d);
+		return (NULL);
+	} d->name = nameCopy, d->owner = ownerCopy, d->age = age;
 	return (d);
 }
-
 
