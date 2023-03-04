@@ -26,6 +26,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	/*PREALLOCATE AND NULLCHECK YOUR NEW CHAR POINTERS*/
 	dog_t *d;
 	char *nameCopy = name;
 	char *ownerCopy = owner;
@@ -44,7 +45,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	d->age = age;
 
 
-	return(d);
+	return (d);
 }
 
 
