@@ -24,6 +24,20 @@ Structures seem to be wayas to package varibales.
 - - via combining the two: exampleStructure{.variableName2 = x, .variableName1 = y} will change the reespective variables within, regardless of their position in the structure.
 
 
+#Typedef
+
+typedef seems to essentially create macros of data types
+
+- for example, this includes things like shortening "unsigned int i" into "lol i"
+
+- can also be used for making jokes like substituting "rofl j" for "char j"
+
+- *most relevantly*, this allows us to rename/add names to struuctures, and to compress their declaration
+
+- - for example, we normall have to type "struct exampleStructure createdStructure" in order to create an exampleStructure
+
+- - - Typedef will instead allow us to say "typedef struct exampleStructure exampleStructure" and now you can create an exampleStructure jsut by saying "exampleStructure createdStructure"
+
 #Betty
 
 Structures are documented as follows:
