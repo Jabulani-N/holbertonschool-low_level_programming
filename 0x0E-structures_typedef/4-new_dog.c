@@ -43,10 +43,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	} /*next assign the name, character by character*/
 	while (magicalIndex < len)
 	{
-		nameCopy[magicalIndex] = name[magicalIndex];
-		magicalIndex++;
+		nameCopy[magicalIndex] = name[magicalIndex], magicalIndex++;
 	}
-	len = 0, magicalIndex = 0;
+	nameCopy[magicalIndex++] = '\0', len = 0, magicalIndex = 0;
 	while (owner[len])
 		len++;
 	ownerCopy = malloc(sizeof(owner) * (len + 1));
@@ -59,13 +58,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		ownerCopy[magicalIndex] = owner[magicalIndex];
 		magicalIndex++;
-	} /*always make sure you can handle nulls*/
-	if (name == NULL || owner == NULL)
+	} ownerCopy[magicalIndex] = '\0';/*always make sure you can handle nulls*/
+/*	if (name == NULL || owner == NULL)
 	{
 		free(d->owner), free(d->name), free(d);
 		return (NULL);
-	} d->name = nameCopy, d->owner = ownerCopy, d->age = age;
+	}*/ d->name = nameCopy, d->owner = ownerCopy, d->age = age;
 	return (d);
-
 }
-
+/*
+ * it probbaly wants the terminating null at he end of the owner and name
+ *
+ *
+ */
