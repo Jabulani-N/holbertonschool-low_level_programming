@@ -58,9 +58,11 @@ task 4: it the firs couple lines in 4-main.c are just declaring my_dog. don't wo
 
 - our function code gets summoned "my_dog = new_dog" line.
 
-- - we just have to take the pointers and shove the parameters into the structure, same as normal
+- - we just have to take the pointers and shove the parameters into a structure, same as normal
 
 - - - note that we'll have to return a whole dog sructure for it to copy, since we're not recieving any addresses.
+
+- - - that means we have to create a new dog inside the function itself
 
 Ultimately, we need to create and return a dog structure with the inputted paramters
 
