@@ -6,7 +6,8 @@
  *
  * @name: received argument
  * @f: received function
- * Return: void
+ * Return: absolutely nothing
+ *	do NOT return "NULL". it will not work.
  *
  * Description: basically, we jsut recieve a funciton
  * create a pointer to said funciton (it'll look liek a variable)
@@ -20,7 +21,7 @@
 void print_name(char *name, void (*f)(char *name2))
 {
 	if (f == NULL || name == NULL)
-		return (NULL);
+		return;
 
 	f(name);
 }
@@ -30,6 +31,8 @@ void print_name(char *name, void (*f)(char *name2))
  *	make sure it is valid
  * run f with the received argument name
  *	make sure it is also valid
- * that's all you need.
+ * that's all you need
+ *
+ * .
  */
 
