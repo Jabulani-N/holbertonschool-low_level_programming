@@ -6,9 +6,9 @@
  *
  * @array: received argument
  * @size: recieved argument. size of array
- * @action: received function
- * Return: absolutely nothing
- *	do NOT return "NULL". it will not work.
+ * @cmp: received function
+ * Return: the index that got a match
+ *	AKA - positive reponse from cmp
  *
  * Description: basically, we jsut recieve a funciton
  * create a pointer to said funciton (it'll look liek a variable)
