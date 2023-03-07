@@ -20,7 +20,7 @@
 
 void print_name(char *name, void (*f)(char *name2))
 {
-	void (*fun_ptr)(char*) = *f;
+	void (*fun_ptr)(char *) = *f;
 
 	if (f == NULL || name == NULL)
 		return;
