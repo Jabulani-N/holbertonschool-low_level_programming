@@ -2,7 +2,7 @@
 
 
 /**
- * print_name - purts recievevd arg1 into recieved function
+ * array_iterator - puts recievevd args into recieved function
  *
  * @array: received argument
  * @size: recieved argument. size of array
@@ -29,14 +29,14 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (action == NULL || size == 0)
 		return;
-	for (index = 0; index < size; index ++)
+	for (index = 0; index < size; index++)
 		fun_ptr(array[index]);
 }
 
 /*
  * basically, just take recieved function
  *	make sure it is valid
- * 	make sure received argument is also valid
+ *	make sure received argument is also valid
  * run received function with received argument
  * that's all you need
  *
