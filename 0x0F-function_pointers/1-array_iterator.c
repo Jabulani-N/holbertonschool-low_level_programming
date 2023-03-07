@@ -24,10 +24,10 @@
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	void (*fun_ptr)(int *) = *action;
-	int index;
+	void (*fun_ptr)(int) = *action;
+	size_t index;
 
-	if (action == NULL || size == NULL)
+	if (action == NULL)
 		return;
 	for (index = 0; index < size; index ++)
 		fun_ptr(array[index]);
