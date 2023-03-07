@@ -24,13 +24,13 @@
 
 int int_index(int *array, int size, int (*cmp)(int))
 {
-	void (*fun_ptr)(int) = *cmp;
+	int (*fun_ptr)(int) = *cmp;
 	int index;
 
 	if (cmp == NULL || size <= 0 || array == NULL)
 		return (-1);
 	for (index = 0; index < size; index++)
-		if (cmp(array[index]))
+		if (fun_ptr(array[index]))
 			return(index);
 	return (-1);
 
