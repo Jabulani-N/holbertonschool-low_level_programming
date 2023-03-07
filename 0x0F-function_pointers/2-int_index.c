@@ -31,7 +31,7 @@ int int_index(int *array, int size, int (*cmp)(int))
 		return (-1);
 	for (index = 0; index < size; index++)
 		if (fun_ptr(array[index]))
-			return(index);
+			return (index);
 	return (-1);
 
 }
