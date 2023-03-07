@@ -27,7 +27,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 	void (*fun_ptr)(int) = *action;
 	size_t index;
 
-	if (action == NULL || size == 0)
+	if (action == NULL || size == 0 || array == NULL)
 		return;
 	for (index = 0; index < size; index++)
 		fun_ptr(array[index]);
