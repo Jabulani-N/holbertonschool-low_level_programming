@@ -29,7 +29,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (action == NULL || size == 0)
 		return;
-	for (index = 0; index <= size; index++)
+	for (index = 0; index < size; index++)
 		fun_ptr(array[index]);
 }
 
