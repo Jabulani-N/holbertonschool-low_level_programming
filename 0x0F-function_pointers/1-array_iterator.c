@@ -29,7 +29,7 @@ void array_iterator(int *array, size_t size, void (*action)(int))
 
 	if (action == NULL || size == 0)
 		return;
-	for (index = 0; index < size; index++)
+	for (index = 0; index <= size; index++)
 		fun_ptr(array[index]);
 }
 
@@ -40,6 +40,9 @@ void array_iterator(int *array, size_t size, void (*action)(int))
  * run received function with received argument
  * that's all you need
  *
- *
+ *	KNOWN BUGS
+ * There is a case of input that creates an incorrect output.
+ * 	usually with arrays, this is a matter of neglecting the final position
+ * 	that holds the trminating null
  */
 
