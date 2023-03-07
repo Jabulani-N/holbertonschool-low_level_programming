@@ -41,8 +41,11 @@ void array_iterator(int *array, size_t size, void (*action)(int))
  * that's all you need
  *
  *	KNOWN BUGS
+ *
+ *		FIXED
  * There is a case of input that creates an incorrect output.
- * 	usually with arrays, this is a matter of neglecting the final position
- * 	that holds the trminating null
+ *	usually with arrays, this is a matter of neglecting the final position
+ *	that holds the trminating null
+ *	- it didn't consider the case of array == NULL
  */
 
