@@ -29,15 +29,15 @@ size_t print_list(const list_t *h)
 	*UQHolder = *h;
 	while (UQHolder != NULL)
 	{
-		if (UQHolder->str == NULL)
+		if (*UQHolder->str == NULL)
 			printf("[0] (nil)");
 		else
 			printf("[%i] %s\n", UQHolder->len, UQHolder->str);
 		UQNumbers++;
 		UQHolder = UQHolder->next;
 	}
-	
-	free (UQHolder);
+
+	free(UQHolder);
 	return (UQNumbers);
 
 }
