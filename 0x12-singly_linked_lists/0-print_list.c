@@ -24,7 +24,7 @@ size_t print_list(const list_t *h)
 	{
 		free(UQHolder);
 		/*printf("[0] (nil)");*/
-		return (-1);
+		return (0);
 	}
 	*UQHolder = *h;
 	while (UQHolder != NULL)
