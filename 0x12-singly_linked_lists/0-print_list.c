@@ -18,13 +18,13 @@ size_t print_list(const list_t *h)
 	list_t *UQHolder = malloc(sizeof(list_t));
 	size_t UQNumbers = 0;
 
-/*	if (UQHolder == NULL)
-*		return (-1);
-*	if (h == NULL)
-*	{
-*		free(UQHolder);
-*		return (0);
-	} *//*becasue NULL is a valid node, you  can let it run like normal*/
+	if (UQHolder == NULL)
+		return (-1);
+	if (h == NULL)
+	{
+		free(UQHolder);
+		return (0);
+	}
 	*UQHolder = *h;
 	while (UQHolder != NULL)
 	{
