@@ -10,6 +10,8 @@
  *Return: the number of linked lists
  */
 
+#include "lists.h"
+#include <string.h>
 
 size_t print_list(const list_t *h)
 {
