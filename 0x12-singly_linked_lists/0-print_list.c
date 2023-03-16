@@ -26,7 +26,7 @@ size_t print_list(const list_t *h)
 		printf("[0] (nil)");
 		return (0);
 	}
-	UQHolder = h;
+	*UQHolder = *h;
 	while (UQHolder != NULL)
 	{
 		printf("[%i] %s\n", UQHolder->len, UQHolder->str);
