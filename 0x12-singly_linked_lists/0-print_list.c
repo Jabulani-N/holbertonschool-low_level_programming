@@ -30,7 +30,7 @@ size_t print_list(const list_t *h)
 	while (UQHolder != NULL)
 	{
 		if (UQHolder->str == NULL)
-			printf("[0] (nil)");
+			printf("(nil)");
 		else
 			printf("[%i] %s\n", UQHolder->len, UQHolder->str);
 		UQNumbers++;
