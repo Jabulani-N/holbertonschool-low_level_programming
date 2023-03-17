@@ -46,7 +46,7 @@ void free_list(list_t *head)
 /*
  * known issues
  * double free detected
- * 	This means it is destroying data that is pointed to by two things
+ *	This means it is destroying data that is pointed to by two things
  *	or that i am trying to free the same address twice
  *
  *	let's try only running the me loop if me can actuall reach UQHolder->next.
