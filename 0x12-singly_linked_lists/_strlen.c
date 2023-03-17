@@ -4,7 +4,6 @@
  * Return: unsigned int taht is input's length
  */
 
-#include "lists.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

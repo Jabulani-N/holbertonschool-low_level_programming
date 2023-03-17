@@ -7,6 +7,9 @@
  * @head: the current list head's address
  * @str: data to hold in the
  *Return: address of newly assigned head
+ *
+ * turns out you're also supposed to print it, I think
+ * don't print here. main file handles that
  */
 
 #include "lists.h"
@@ -16,7 +19,7 @@
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *UQHolder = malloc(sizeof(list_t));
-	char *strContent = NULL;
+	char *strContent;
 
 /*	printf("made it through initialization\n");*/
 	if (UQHolder == NULL)
@@ -24,18 +27,35 @@ list_t *add_node(list_t **head, const char *str)
 /*	printf("malloc was success\n");*/
 
 	if (!(str))
-		return (NULL);
-
-	strContent = strdup(str);
+		strContent = (NULL);
+	else
+		strContent = strdup(str);
 /*	printf("succeeded at strdup without breaking\n");*/
 /*	printf("strContetnt is now %s\n",strContent);*/
+
+/*
 	if (*head)
-		UQHolder->next = *head;
+		UQHolder->next = *head, printf("I had a usable value for *head\n");
 	else
-		UQHolder->next = NULL;
-	UQHolder->/***/str = strContent;
+		UQHolder->next = NULL, printf("I recieved false foe if(*head)\n");
+*/
+
+	UQHolder->next = &**head;
+
+	UQHolder->str = strContent;
 	/*now create a custom strlen*/
 	UQHolder->len = _strlen(str);
+
+/*	print_list(UQHolder);*/
+/*	printf("print_list inside the add_node funciton succeeded\n");*/
+
+	*head = UQHolder;
+		/*i've changed address of shared structure head to be what we just made*/
+
+		/*
+		 * this means whoever called this funct can still get the head
+		 *	by searching the same struct name as before
+		 */
 	return (UQHolder);
 
 }
@@ -43,4 +63,17 @@ list_t *add_node(list_t **head, const char *str)
  * notes
  * strdup already uses malloc, so you should be able to free it directly
  * strdup is required
+ */
+
+/*
+ * KNOWN ISSUES
+ *			SOLVED - it was not changing the "head" address to new head
+ *			need to do this so "head" always means real head
+ * it is not preservng the previous entry
+ *	when you print_list it, it only prints the one item
+ * print_list is known properly funciotnal to print entire linked list
+ *
+ * this means it is not properly linking to the previous address to be next
+ *
+ *
  */
