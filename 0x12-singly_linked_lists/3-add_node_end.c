@@ -22,7 +22,7 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (UQHolder == NULL)
 		return (NULL);
-	
+
 	UQHolder->str = strdup(str);
 /*	printf("successfyk strdup.\nUQHolder->str is now %s\n",UQHolder->str);*/
 	/*now create a custom strlen*/
