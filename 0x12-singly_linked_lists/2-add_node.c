@@ -33,13 +33,6 @@ list_t *add_node(list_t **head, const char *str)
 /*	printf("succeeded at strdup without breaking\n");*/
 /*	printf("strContetnt is now %s\n",strContent);*/
 
-/*
-	if (*head)
-		UQHolder->next = *head, printf("I had a usable value for *head\n");
-	else
-		UQHolder->next = NULL, printf("I recieved false foe if(*head)\n");
-*/
-
 	UQHolder->next = &**head;
 
 	UQHolder->str = strContent;
@@ -51,11 +44,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	*head = UQHolder;
 		/*i've changed address of shared structure head to be what we just made*/
-
-		/*
-		 * this means whoever called this funct can still get the head
-		 *	by searching the same struct name as before
-		 */
+		/* this means whoever called this funct can still get the head*/
+		/*	by searching the same struct name as before*/
+	 
 	return (UQHolder);
 
 }
