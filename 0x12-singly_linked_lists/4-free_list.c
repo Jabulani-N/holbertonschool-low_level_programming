@@ -23,13 +23,13 @@ void free_list(list_t *head)
 		return;
 	if (me == NULL)
 	{
-		free(UQHolder->str);
+/*		free(UQHolder->str);*/
 		free(UQHolder);
 		return;
 	}
 	if (head == NULL)
 	{
-		free(UQHolder->str), free(me->str), free(head->str);
+/*		free(UQHolder->str), free(me->str), free(head->str);*/
 		free(UQHolder), free(me), free(head);
 		return;
 	}
