@@ -17,21 +17,22 @@
 
 void free_list(list_t *head)
 {
-	list_t *UQHolder/* = malloc(sizeof(list_t))*/, *me/* = malloc(sizeof(list_t))*/;
+	list_t *UQHolder;
+
 	if (head == NULL)
 		return;
 /*	printf("initialized\nabout to UQHolder = head\n");*/
 	UQHolder = head;
 /*	printf("UQHolder is now head\ngonnawhile UQH->next != NULL\n");*/
-	while (UQHolder)
+	while (head)
 	{ /*printf("in loop of while UQH->next != NULL\n");*/
-		me = UQHolder;
-		UQHolder = UQHolder->next;
-		free(me->str);
-		free(me);
+		UQHolder = head;
+		head = head->next;
+		free(UQHolder->str);
+		free(UQHolder);
 	} /*printf("gonna free the last UQHolder\n");*/
 /*	free(UQHolder->str);*//*no str if i dont exist*/
-	free(UQHolder);
+	free(head);
 
 }
 /*
