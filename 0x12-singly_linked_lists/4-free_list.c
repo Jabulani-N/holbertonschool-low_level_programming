@@ -30,7 +30,7 @@ void free_list(list_t *head)
 	if (head == NULL)
 	{
 /*		free(UQHolder->str), free(me->str), free(head->str);*/
-		free(UQHolder), free(me), free(head);
+		free(UQHolder), free(me);
 		return;
 	}
 /*	printf("initialized\nabout to UQHolder = head\n");*/
