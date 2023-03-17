@@ -31,16 +31,20 @@ void free_list(list_t *head)
 		free(UQHolder), free(me);
 		return;
 	}
-/*	printf("initialized\nabout to UQHolder = head\n");*/
+	printf("initialized\nabout to UQHolder = head\n");
 	UQHolder = head;
-/*	printf("UQHolder is now head\ngonnawhile UQH->next != NULL\n");*/
+	printf("UQHolder is now head\ngonnawhile UQH->next != NULL\n");
 	while (UQHolder->next != NULL)
-	{ /*printf("in loop of while UQH->next != NULL\n");*/
-		me = UQHolder;
-		UQHolder = UQHolder->next;
+	{ printf("in loop of while UQH->next != NULL\n");
+		me = UQHolder->next;
+		while (me->next != NULL)
+			me = me->next, printf("me just became me->next\n");
+/*		free(&(me->str)), free(&(me->len)), free(&(me->next));*/
+		printf("about to free me\n");
 		free(me);
-	} /*printf("gonna free UQHolder\n");*/
-	free(UQHolder);
+	} printf("about to free UQHolder's contents and self\n");
+/*	free(&(UQHolder->str)), free(&(UQHolder->str)), free(&(UQHolder->len));*/
+	free(UQHolder);/*the last free(me) will also free UQHolder becase it shares an address*/
 
 }
 /*
@@ -58,5 +62,4 @@ void free_list(list_t *head)
  *	the loop isn't reaching different places each time
  *
  *	let's try destroying current before moving to next instead
- *		SOLVED - the above solved it. inspired by stackoverflow
  */
