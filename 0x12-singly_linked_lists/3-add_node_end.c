@@ -49,7 +49,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return(UQHolder);
 	}
 
-	traverser = *head, /*printf("traverser has become head\n");*/
+	traverser = *head/*, printf("traverser has become head\n")*/;
 	while (traverser->next != NULL)
 	{ /*printf("traverser-> next was not NULL\n");*/
 		traverser = traverser->next;
