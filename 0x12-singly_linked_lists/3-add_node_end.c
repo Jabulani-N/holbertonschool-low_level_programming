@@ -24,14 +24,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (str)
 		UQHolder->str = strdup(str);
 	else
-		UQHolder->str = NULL;
+		UQHolder->str = (NULL);
 /*	printf("successfyk strdup.\nUQHolder->str is now %s\n",UQHolder->str);*/
 	/*now create a custom strlen*/
 	UQHolder->len = _strlen(UQHolder->str);
 /*	printf("assigned len\n");*/
 	if (*head == NULL)
 	{/*just make the new guy and call it head*/
-		UQHolder->next = *head;
 		*head = UQHolder;
 		return (UQHolder);
 	}
