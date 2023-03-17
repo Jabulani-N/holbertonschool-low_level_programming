@@ -29,6 +29,7 @@ list_t *add_node_end(list_t **head, const char *str)
 /*	printf("assigned len\n");*/
 	if (*head == NULL)
 	{/*just make the new guy and call it head*/
+		UQHolder->next = *head;
 		*head = UQHolder;
 		return (UQHolder);
 	}
