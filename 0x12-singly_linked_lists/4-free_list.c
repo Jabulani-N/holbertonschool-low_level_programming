@@ -17,7 +17,7 @@
 
 void free_list(list_t *head)
 {
-	list_t *UQHolder = malloc(sizeof(list_t)), *me = malloc(sizeof(list_t));
+	list_t *UQHolder/* = malloc(sizeof(list_t))*/, *me/* = malloc(sizeof(list_t))*/;
 
 	if (UQHolder == NULL)
 		return;
