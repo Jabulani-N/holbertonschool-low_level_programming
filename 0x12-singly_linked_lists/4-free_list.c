@@ -38,8 +38,10 @@ void free_list(list_t *head)
 	{ /*printf("in loop of while UQH->next != NULL\n");*/
 		me = UQHolder;
 		UQHolder = UQHolder->next;
+		free (me->str);
 		free(me);
 	} /*printf("gonna free UQHolder\n");*/
+	free (UQHolder->str);
 	free(UQHolder);
 
 }
@@ -59,4 +61,9 @@ void free_list(list_t *head)
  *
  *	let's try destroying current before moving to next instead
  *		SOLVED - the above solved it. inspired by stackoverflow
+ */
+
+/*
+ *				notes
+ * you have to free the node's string. nothing else.
  */
