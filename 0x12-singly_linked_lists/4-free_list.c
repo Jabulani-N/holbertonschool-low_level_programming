@@ -36,14 +36,14 @@ void free_list(list_t *head)
 /*	printf("initialized\nabout to UQHolder = head\n");*/
 	UQHolder = head;
 /*	printf("UQHolder is now head\ngonnawhile UQH->next != NULL\n");*/
-	while (UQHolder->next != NULL)
+	while (UQHolder)
 	{ /*printf("in loop of while UQH->next != NULL\n");*/
 		me = UQHolder;
 		UQHolder = UQHolder->next;
 		free(me->str);
 		free(me);
-	} /*printf("gonna free UQHolder\n");*/
-	free(UQHolder->str);
+	} /*printf("gonna free the last UQHolder\n");*/
+/*	free(UQHolder->str);*//*no str if i dont exist*/
 	free(UQHolder);
 
 }
