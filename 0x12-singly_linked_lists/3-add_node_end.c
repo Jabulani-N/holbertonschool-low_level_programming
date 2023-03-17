@@ -17,9 +17,10 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *UQHolder = malloc(sizeof(list_t)), *traverser = malloc(sizeof(list_t));
+	list_t *UQHolder = malloc(sizeof(list_t));
+	list_t *traverser = malloc(sizeof(list_t));
 
-/*	printf("made it through initialization\n");*/
+	/*printf("successful initialization\n");*/
 	if (UQHolder == NULL)
 		return (NULL);
 	if (traverser == NULL)
@@ -31,22 +32,15 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (!(str))
 		UQHolder->str = (NULL);
 	else
-		UQHolder->str= strdup(str);
-/*	printf("succeeded at strdup without breaking\n");*/
-/*	printf("UQHolder->str is now %s\n",UQHolder->str);*/
-
-/*	UQHolder->next = NULL;*/
-/*	printf("UQHolder->net has become NULL");*/
+		UQHolder->str = strdup(str);
+/*	printf("successfyk strdup.\nUQHolder->str is now %s\n",UQHolder->str);*/
 	/*now create a custom strlen*/
 	UQHolder->len = _strlen(UQHolder->str);
 /*	printf("assigned len\n");*/
-/*	print_list(UQHolder);*/
-/*	printf("print_list inside the add_node funciton succeeded\n");*/
-
 	if (*head == NULL)
 	{/*just make the new guy and call it head*/
 		*head = UQHolder;
-		return(UQHolder);
+		return (UQHolder);
 	}
 
 	traverser = *head/*, printf("traverser has become head\n")*/;
@@ -56,7 +50,7 @@ list_t *add_node_end(list_t **head, const char *str)
 /*		printf("traverser has been moved to traverser->next\n");*/
 	}
 	/*we are now at the tail*/
-/*	printf("we arrived at tail and are about to assign traverser->next = UQHolder\n");*/
+/*	printf("arrived at tail. about to assign traverser->next = UQHolder\n");*/
 	traverser->next = UQHolder;
 
 	return (UQHolder);
