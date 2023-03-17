@@ -4,15 +4,21 @@
  * Return: unsigned int taht is input's length
  */
 
-unsigned int _strlen(char *input)
+#include "lists.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+unsigned int _strlen(const char *input)
 {
 	unsigned int len = 0;
 
+/*	printf("_strlen activated\n");*/
 	while (*(input + len))
 	{
 
 		len++;
-	}
+	} /*printf("_strlen deactivating\n");*/
 	return (len);
 }
 

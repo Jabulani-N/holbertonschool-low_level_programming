@@ -11,15 +11,17 @@
 
 #include "lists.h"
 #include <string.h>
+#include "_strlen.c"
 
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *UQHolder = malloc(sizeof(list_t));
-	size_t UQNumbers = 0;
-	char *strContent;
+	char *strContent = NULL;
 
+/*	printf("made it through initialization\n");*/
 	if (UQHolder == NULL)
-		return (-1);
+		return (NULL);
+/*	printf("malloc was success\n");*/
 /*	if (head == NULL)*/
 /*	{*/
 /*		free(UQHolder);*/
@@ -27,10 +29,17 @@ list_t *add_node(list_t **head, const char *str)
 /*	}*/
 	/*it doesn't matter here if head is null.*/
 	/*linked lists end on pointing to NULL anyway*/
-	*UQHolder->next = *head;
-	*UQHolder->*str = str;
+
+	strContent = strdup(str);
+/*	printf("succeeded at strdup without breaking\n");*/
+/*	printf("strContetnt is now %s\n",strContent);*/
+	if (*head)
+		UQHolder->next = *head;
+	else
+		UQHolder->next = NULL;
+	UQHolder->/***/str = strContent;
 	/*now create a custom strlen*/
-	*UQHolder->len = _strlen(str);
+	UQHolder->len = _strlen(str);
 	return (UQHolder);
 
 }
