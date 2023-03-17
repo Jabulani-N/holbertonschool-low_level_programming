@@ -18,21 +18,8 @@
 void free_list(list_t *head)
 {
 	list_t *UQHolder/* = malloc(sizeof(list_t))*/, *me/* = malloc(sizeof(list_t))*/;
-
-	if (UQHolder == NULL)
-		return;
-	if (me == NULL)
-	{
-/*		free(UQHolder->str);*/
-		free(UQHolder);
-		return;
-	}
 	if (head == NULL)
-	{
-/*		free(UQHolder->str), free(me->str), free(head->str);*/
-		free(UQHolder), free(me);
 		return;
-	}
 /*	printf("initialized\nabout to UQHolder = head\n");*/
 	UQHolder = head;
 /*	printf("UQHolder is now head\ngonnawhile UQH->next != NULL\n");*/

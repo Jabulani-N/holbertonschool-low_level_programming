@@ -17,40 +17,40 @@
 
 void free_list(list_t *head)
 {
-	list_t *UQHolder = malloc(sizeof(list_t)), *me = malloc(sizeof(list_t));
+	list_t *UQHolder/* = malloc(sizeof(list_t))*/, *me/* = malloc(sizeof(list_t))*/;
 
 	if (UQHolder == NULL)
 		return;
 	if (me == NULL)
 	{
+/*		free(UQHolder->str);*/
 		free(UQHolder);
 		return;
 	}
 	if (head == NULL)
 	{
+/*		free(UQHolder->str), free(me->str), free(head->str);*/
 		free(UQHolder), free(me);
 		return;
 	}
-	printf("initialized\nabout to UQHolder = head\n");
+/*	printf("initialized\nabout to UQHolder = head\n");*/
 	UQHolder = head;
-	printf("UQHolder is now head\ngonnawhile UQH->next != NULL\n");
-	while (UQHolder->next != NULL)
-	{ printf("in loop of while UQH->next != NULL\n");
-		me = UQHolder->next;
-		while (me->next != NULL)
-			me = me->next, printf("me just became me->next\n");
-/*		free(&(me->str)), free(&(me->len)), free(&(me->next));*/
-		printf("about to free me\n");
+/*	printf("UQHolder is now head\ngonnawhile UQH->next != NULL\n");*/
+	while (UQHolder)
+	{ /*printf("in loop of while UQH->next != NULL\n");*/
+		me = UQHolder;
+		UQHolder = UQHolder->next;
+		free(me->str);
 		free(me);
-	} printf("about to free UQHolder's contents and self\n");
-/*	free(&(UQHolder->str)), free(&(UQHolder->str)), free(&(UQHolder->len));*/
-	free(UQHolder);/*the last free(me) will also free UQHolder becase it shares an address*/
+	} /*printf("gonna free the last UQHolder\n");*/
+/*	free(UQHolder->str);*//*no str if i dont exist*/
+	free(UQHolder);
 
 }
 /*
  * known issues
  * double free detected
- * 	This means it is destroying data that is pointed to by two things
+ *	This means it is destroying data that is pointed to by two things
  *	or that i am trying to free the same address twice
  *
  *	let's try only running the me loop if me can actuall reach UQHolder->next.
@@ -62,4 +62,10 @@ void free_list(list_t *head)
  *	the loop isn't reaching different places each time
  *
  *	let's try destroying current before moving to next instead
+ *		SOLVED - the above solved it. inspired by stackoverflow
+ */
+
+/*
+ *				notes
+ * you have to free the node's string. nothing else.
  */
