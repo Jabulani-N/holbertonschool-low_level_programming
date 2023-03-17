@@ -23,11 +23,13 @@ void free_list(list_t *head)
 		return;
 	if (me == NULL)
 	{
+		free(UQHolder->str);
 		free(UQHolder);
 		return;
 	}
 	if (head == NULL)
 	{
+		free(UQHolder->str), free(me->str), free(head->str);
 		free(UQHolder), free(me), free(head);
 		return;
 	}
@@ -38,10 +40,10 @@ void free_list(list_t *head)
 	{ /*printf("in loop of while UQH->next != NULL\n");*/
 		me = UQHolder;
 		UQHolder = UQHolder->next;
-		free (me->str);
+		free(me->str);
 		free(me);
 	} /*printf("gonna free UQHolder\n");*/
-	free (UQHolder->str);
+	free(UQHolder->str);
 	free(UQHolder);
 
 }
