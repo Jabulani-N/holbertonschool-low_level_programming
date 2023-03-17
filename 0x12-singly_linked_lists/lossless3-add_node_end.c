@@ -7,7 +7,7 @@
  * @head: the current list head's address
  * @str: data to hold in the
  *Return: address of newly created tail
- *
+ *	on failure, NULL
  * don't print here. main file handles that
  */
 
@@ -17,22 +17,14 @@
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *UQHolder = malloc(sizeof(list_t));
-	list_t *traverser = malloc(sizeof(list_t));
+	list_t *UQHolder = malloc(sizeof(list_t)), *traverser;
 
-	/*printf("successful initialization\n");*/
 	if (UQHolder == NULL)
 		return (NULL);
-	if (traverser == NULL)
-	{
-		free(UQHolder);
-		return (NULL);
-	} /*printf("malloc was successful\n");*/
-
-	if (!(str))
-		UQHolder->str = (NULL);
-	else
+	if (str)
 		UQHolder->str = strdup(str);
+	else
+		UQHolder->str = (NULL);
 /*	printf("successfyk strdup.\nUQHolder->str is now %s\n",UQHolder->str);*/
 	/*now create a custom strlen*/
 	UQHolder->len = _strlen(UQHolder->str);
@@ -40,13 +32,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (*head == NULL)
 	{/*just make the new guy and call it head*/
 		*head = UQHolder;
-		free(traverser);
 		return (UQHolder);
 	}
-
-	traverser = *head/*, printf("traverser has become head\n")*/;
+	traverser = *head;
 	while (traverser->next != NULL)
-	{ /*printf("traverser-> next was not NULL\n");*/
+	{
 		traverser = traverser->next;
 /*		printf("traverser has been moved to traverser->next\n");*/
 	}
