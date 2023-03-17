@@ -28,7 +28,7 @@ void free_list(list_t *head)
 	}
 	if (head == NULL)
 	{
-		free(UQHolder), free(me);
+		free(UQHolder), free(me), free(head);
 		return;
 	}
 /*	printf("initialized\nabout to UQHolder = head\n");*/
