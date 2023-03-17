@@ -22,13 +22,9 @@ list_t *add_node(list_t **head, const char *str)
 	if (UQHolder == NULL)
 		return (NULL);
 /*	printf("malloc was success\n");*/
-/*	if (head == NULL)*/
-/*	{*/
-/*		free(UQHolder);*/
-/*		return (0);*/
-/*	}*/
-	/*it doesn't matter here if head is null.*/
-	/*linked lists end on pointing to NULL anyway*/
+
+	if (!(str))
+		return (NULL);
 
 	strContent = strdup(str);
 /*	printf("succeeded at strdup without breaking\n");*/
