@@ -46,7 +46,7 @@ list_t *add_node(list_t **head, const char *str)
 		/*i've changed address of shared structure head to be what we just made*/
 		/* this means whoever called this funct can still get the head*/
 		/*	by searching the same struct name as before*/
-	 
+
 	return (UQHolder);
 
 }
