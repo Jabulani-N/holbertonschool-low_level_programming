@@ -39,7 +39,7 @@ list_t *add_node_end(list_t **head, const char *str)
 /*	printf("UQHolder->net has become NULL");*/
 	/*now create a custom strlen*/
 	UQHolder->len = _strlen(UQHolder->str);
-	printf("assigned len\n");
+/*	printf("assigned len\n");*/
 /*	print_list(UQHolder);*/
 /*	printf("print_list inside the add_node funciton succeeded\n");*/
 
@@ -49,7 +49,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return(UQHolder);
 	}
 
-	traverser = *head, printf("traverser has become head\n");
+	traverser = *head, /*printf("traverser has become head\n");*/
 	while (traverser->next != NULL)
 	{ /*printf("traverser-> next was not NULL\n");*/
 		traverser = traverser->next;
