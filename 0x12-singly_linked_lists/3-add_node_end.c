@@ -14,6 +14,7 @@
 #include "lists.h"
 #include <string.h>
 #include "_strlen.c"
+#include <stdio.h>
 
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -21,21 +22,20 @@ list_t *add_node_end(list_t **head, const char *str)
 
 	if (UQHolder == NULL)
 		return (NULL);
-	if (!(str))
-		UQHolder->str = (NULL);
-	else
-		UQHolder->str = strdup(str);
+	
+	UQHolder->str = strdup(str);
 /*	printf("successfyk strdup.\nUQHolder->str is now %s\n",UQHolder->str);*/
 	/*now create a custom strlen*/
 	UQHolder->len = _strlen(UQHolder->str);
 /*	printf("assigned len\n");*/
+	UQHolder->next = NULL;
 	if (*head == NULL)
 	{/*just make the new guy and call it head*/
 		*head = UQHolder;
 		return (UQHolder);
 	}
 	traverser = *head;
-	UQHolder->next = NULL;
+
 	while (traverser->next != NULL)
 	{
 		traverser = traverser->next;
