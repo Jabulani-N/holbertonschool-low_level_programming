@@ -15,23 +15,28 @@
 
 size_t print_list(const list_t *h)
 {
-
+	list_t *UQHolder = malloc(sizeof(list_t));
 	size_t UQNumbers = 0;
 
+	if (UQHolder == NULL)
+		return (-1);
 	if (h == NULL)
 	{
+		free(UQHolder);
 		return (0);
 	}
-	while (h)
+	*UQHolder = *h;
+	while (UQHolder != NULL)
 	{
-		if (h->str == NULL)
+		if (UQHolder->str == NULL)
 			printf("[0] (nil)\n");
 		else
-			printf("[%i] %s\n", h->len, h->str);
+			printf("[%i] %s\n", UQHolder->len, UQHolder->str);
 		UQNumbers++;
-		h = h->next;
+		UQHolder = UQHolder->next;
 	}
 
+	free(UQHolder);
 	return (UQNumbers);
 
 }
