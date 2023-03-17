@@ -35,6 +35,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (UQHolder);
 	}
 	traverser = *head;
+	UQHolder->next = NULL;
 	while (traverser->next != NULL)
 	{
 		traverser = traverser->next;
@@ -43,7 +44,6 @@ list_t *add_node_end(list_t **head, const char *str)
 	/*we are now at the tail*/
 /*	printf("arrived at tail. about to assign traverser->next = UQHolder\n");*/
 	traverser->next = UQHolder;
-	UQHolder->next = NULL;
 
 	return (UQHolder);
 
