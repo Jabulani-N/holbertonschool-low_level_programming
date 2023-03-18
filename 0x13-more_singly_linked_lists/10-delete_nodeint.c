@@ -40,8 +40,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	} /*we are now one node before where we want to delete one*/
 	/*Whirlygig Shuffle*/
 	holder = frozenTraveler->next;/*preserve original next*/
-	frozenTraveler->next = (frozenTraveler->next)->next;
+	/*make sure that very last slot is valid too*/
+	if (holder != NULL)
+		frozenTraveler->next = (frozenTraveler->next)->next;
 		/*take original next's place in line*/
+		/*there's nothing to fix if next was null*/
 	free(holder);/*delete original next*/
 	if (holder == NULL)/*ensure free worked*/
 		return (1);
