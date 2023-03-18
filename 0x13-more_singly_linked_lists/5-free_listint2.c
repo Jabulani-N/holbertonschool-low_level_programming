@@ -11,15 +11,15 @@
 
 void free_listint2(listint_t **head)
 {
-	listint_t *scapegoatWax, *traverser;
+	listint_t *scapegoatWax;
 
-	traverser = *head;
+
 	if (*head != NULL)
 	{
-		while (traverser)
+		while (*head)
 		{
-			scapegoatWax = traverser;
-			traverser = traverser->next;
+			scapegoatWax = *head;
+			*head = (*head)->next;
 			free(scapegoatWax);
 		}
 	}
