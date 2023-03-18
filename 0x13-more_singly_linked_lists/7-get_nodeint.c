@@ -19,9 +19,9 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		return (NULL);
 
 	frozenTraveler = head;
-	while (index < 0)
+	while (index > 0)
 	{
-		if frozenTraveler->next != NULL
+		if (frozenTraveler->next != NULL)
 			frozenTraveler = frozenTraveler->next;
 		else/*asked ot go past existing nodes*/
 			return (NULL);
