@@ -17,7 +17,7 @@ int sum_listint(listint_t *head)
 	listint_t *holder;
 	int total = 0;
 
-	holder = h;
+	holder = head;
 	while (holder)/*so we don't break head for other functions*/
 	{
 		total += holder->n;
