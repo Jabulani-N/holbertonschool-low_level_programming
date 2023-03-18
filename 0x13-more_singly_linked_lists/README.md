@@ -20,8 +20,8 @@ if head was null, always be sure to change head itself to the newly created node
 
 when you have node **head
 
-- you still have to check for if 'head=NULL'
+- you still have to check for if `head=NULL`
 
-- - not just if '*head=NULL'
+- - not just if `*head=NULL`
 
 
