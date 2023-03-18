@@ -1,7 +1,7 @@
 /**
  * pop_listint - deletes head
  * @head: *head is address of current head
- * Return: [new] (*head)->n
+ * Return: [old] (*head)->n
  *	if we end up with an empty linked list, 0
  */
 
@@ -9,10 +9,12 @@
 
 int pop_listint(listint_t **head)
 {
-	listint_t UQHolder;
+	listint_t *UQHolder;
+	int oldHold;
 
 	if ((*head) != NULL)
 	{
+		oldHold = (*head)->n;
 		if ((*head)->next != NULL)
 		{
 			UQHolder = (*head)->next;
@@ -20,11 +22,11 @@ int pop_listint(listint_t **head)
 		else
 		{
 			free(*head);
-			return (0);
+			return (oldHold);
 		}
 		free(*head);
 		(*head) = UQHolder;
-		return ((*head)->n);
+		return (oldHold);
 	}
 	else
 		return (0);
