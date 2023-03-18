@@ -16,16 +16,16 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	listint_t *newlyHead = malloc(sizeof(listint_t));
 
 	if (!(newlyHead))
-		return(NULL);
+		return (NULL);
 
 	/*fill new head's data*/
-	newlyHead->n=n
+	newlyHead->n = n;
 	/*make new head point to old head*/
 	newlyHead->next = *head;
 	/*make the variable "head" point to the newly made head*/
 	/*old head's address and data? safely stored in newlyHead->next*/
 	*head = newlyHead;
-	return(*head);
+	return (*head);
 	/*you'll know it's right when returning head gives newlyHead*/
 }
 
