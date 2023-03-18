@@ -16,7 +16,7 @@ if head was null, always be sure to change head itself to the newly created node
 
 "*head is a pointer. did you mean to use '->'?"
 
-- you tried to do *head->next. use (*head)->next instead.
+- you tried to do `*head->next`. use `(*head)->next` instead.
 
 when you have node **head
 
