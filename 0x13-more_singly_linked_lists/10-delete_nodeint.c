@@ -46,10 +46,5 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		/*take original next's place in line*/
 		/*there's nothing to fix if next was null*/
 	free(holder);/*delete original next*/
-/*	if (holder == NULL)*//*ensure free worked*/
-/*		return (1);
-	else
-		return (-1);
-*/
 	return (1);
 }
