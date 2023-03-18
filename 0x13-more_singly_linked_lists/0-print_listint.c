@@ -14,7 +14,7 @@
 
 size_t print_listint(const listint_t *h)
 {
-	listint_t *holder;
+	const listint_t *holder;
 	size_t count = 0;
 
 	holder = h;
