@@ -18,4 +18,10 @@ if head was null, always be sure to change head itself to the newly created node
 
 - you tried to do *head->next. use (*head)->next instead.
 
+when you have node **head
+
+- you still have to check for if <head=NULL>
+
+- - not just if <*head=NULL>
+
 
