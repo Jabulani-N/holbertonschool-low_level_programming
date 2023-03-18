@@ -18,8 +18,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 	if (index == 0)/*head deletion.*/
 	{
-/*		if (pop_listint(head) == 0)*/
-/*			return (-1);*/
+		if (pop_listint(head) == 0)
+			return (-1);
 		return (1);
 		/*why do work twice?*/
 	}
@@ -33,7 +33,8 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	} /*we are now one node before where we want to delete one*/
 	/*Whirlygig Shuffle*/
 	holder = frozenTraveler->next;/*preserve original next*/
-	frozenTraveler->next = (frozenTraveler->next)->next;/*take original next's place in line*/
+	frozenTraveler->next = (frozenTraveler->next)->next;
+		/*take original next's place in line*/
 	free(holder);/*delete original next*/
 	if (holder == NULL)/*ensure free worked*/
 		return (1);
