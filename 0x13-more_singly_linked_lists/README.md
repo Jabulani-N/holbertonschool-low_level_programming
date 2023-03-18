@@ -10,5 +10,7 @@ Linked Lists are structures (nodes) that store both usable data, and the address
 - - we'll still count that NULL as not being 1 node, so if that's alone in the list, the list has size 0
 
 - - - 
+# Pitfalls
 
+if head was null, always be sure to change head itself to the newly created node
 
