@@ -25,4 +25,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 			frozenTraveler = frozenTraveler->next;
 		else/*asked ot go past existing nodes*/
 			return (NULL);
+		index--;
+	}
+	return (frozenTraveler);
 }
