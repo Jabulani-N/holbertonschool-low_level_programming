@@ -17,14 +17,14 @@ void free_listint2(listint_t **head)
 	if (*head == NULL)
 		return;
 
-		while ((*head)->next)
-		{
-			scapegoatWax = *head;
-			*head = (*head)->next;
-			free(scapegoatWax);
-		}
-		free(*head);
-		*head = NULL;
+	while ((*head)->next)
+	{
+		scapegoatWax = *head;
+		*head = (*head)->next;
+		free(scapegoatWax);
+	}
+	free(*head);
+	*head = NULL;
 
 }
 
