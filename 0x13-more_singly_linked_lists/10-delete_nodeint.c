@@ -9,7 +9,7 @@
 
 #include "lists.h"
 #include "6-pop_listint.c"
-
+#include "1-listint_len.c"
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *frozenTraveler, *holder;
@@ -24,10 +24,16 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		/*why do work twice?*/
 	}
 	frozenTraveler = *head;
+	/*if index is fatter than list length, return -1*/
+	if (index >= listint_len(*head))
+		return (-1);
 	while (index > 1)
-	{
-		if (frozenTraveler->next == NULL)
+	{ printf("im in the index > 1 while loop\n");
+		if (frozenTraveler->next == NULL) 
+		{
+			printf("tried invalid delete location\n");
 			return (-1);/*tried to delete OOB*/
+		}
 		frozenTraveler = frozenTraveler->next;
 		index--;
 	} /*we are now one node before where we want to delete one*/
