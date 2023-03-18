@@ -13,21 +13,22 @@
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	listint_t *frozenTraveler, *holder;
+	listint_t *frozenTraveler, *holder = malloc(sizeof(listint_t));
 
 	if (head == NULL)
 		return (NULL);
-
+	if (holder == NULL)
+		return (NULL);
 	if (idx == 0)/*head replacement.*/
 		return (add_nodeint(head, n));
 		/*why do work twice?*/
 	frozenTraveler = *head;
-	while (index > 1)
+	while (idx > 1)
 	{
 		if (frozenTraveler->next == NULL)
 			return (NULL);/*tried to insert OOB*/
-		frozenTraveler = frozeneTraveler->next;
-		index--;
+		frozenTraveler = frozenTraveler->next;
+		idx--;
 	} /*we are now one node before where we want to make one*/
 	/*Whirlygig Shuffle*/
 	holder->next = frozenTraveler->next;/*preserve original next*/
