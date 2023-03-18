@@ -10,6 +10,7 @@
 #include "lists.h"
 #include "6-pop_listint.c"
 #include "1-listint_len.c"
+
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	listint_t *frozenTraveler, *holder;
@@ -28,7 +29,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	if (index >= listint_len(*head))
 		return (-1);
 	while (index > 1)
-	{ printf("im in the index > 1 while loop\n");
+	{ /*printf("im in the index > 1 while loop\n");*/
 		if (frozenTraveler->next == NULL)
 		{
 			/*printf("tried invalid delete location\n");*/
