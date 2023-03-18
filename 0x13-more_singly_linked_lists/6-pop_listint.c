@@ -15,15 +15,7 @@ int pop_listint(listint_t **head)
 	if ((*head) != NULL)
 	{
 		oldHold = (*head)->n;
-		if ((*head)->next != NULL)
-		{
-			UQHolder = (*head)->next;
-		}
-		else
-		{
-			free(*head);
-			return (oldHold);
-		}
+		UQHolder = (*head)->next;
 		free(*head);
 		(*head) = UQHolder;
 		return (oldHold);
