@@ -2,19 +2,24 @@
  * free_listint2 - frees linked list
  * @head: head of linked list
  * Return: to nothingness
+ *
+ * must set head to null
+ * pretty sure mine was NULL already from my adder funct
  */
 
 #include "lists.h"
 
-void free_listint2(listint_t *head)
+void free_listint2(listint_t **head)
 {
-	listint_t *scapegoatWax;
+	listint_t *scapegoatWax, *traverser;
 
-	while (head)
+	traverser = *head;
+	while (traverser)
 	{
-		scapegoatWax = head;
-		head = head->next;
+		scapegoatWax = traverser;
+		traverser = traverser->next;
 		free(scapegoatWax);
 	}
+	*head = NULL;
 }
 
