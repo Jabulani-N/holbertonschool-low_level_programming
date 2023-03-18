@@ -29,9 +29,9 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		return (-1);
 	while (index > 1)
 	{ printf("im in the index > 1 while loop\n");
-		if (frozenTraveler->next == NULL) 
+		if (frozenTraveler->next == NULL)
 		{
-			printf("tried invalid delete location\n");
+			/*printf("tried invalid delete location\n");*/
 			return (-1);/*tried to delete OOB*/
 		}
 		frozenTraveler = frozenTraveler->next;
