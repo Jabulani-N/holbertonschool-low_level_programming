@@ -11,20 +11,26 @@
  */
 
 #include "main.h"
-
+#include "_strlen.c"
+#include "_pow.c"
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int index, pos = 0, len = _strlen(b), sum = 0;
+	unsigned int index, pos, len = (_strlen(b) - 1), sum = 0;
 
+/*	printf("len is %i\n", len);*/
 	if  (b == NULL)
 		return (0);
 
 	for (pos = 0; b[pos]; pos++)
-	{
+	{ /*printf("sum spawned in at %i\n", sum);*/
 		if (b[pos] != '0' && b[pos] != '1')
 			return (0);
-		index = (len - pos - 1);
-		sum += (b[pos] * (pow(2, index)));
+		index = (len - pos);
+		sum = sum + ((b[pos] - 48) * (_simpow(2, index)));
+		/*converting the char into respective int*/
+		/*will need a separate sorting to use hex/anything including letters*/
+/*		printf("index is %i; pos is %i; sum is %i\n", index, pos, sum);*/
+/*		printf("item was %c which turned into int %i\n", b[pos], b[pos] - 48);*/
 	}
 	return (sum);
 }
