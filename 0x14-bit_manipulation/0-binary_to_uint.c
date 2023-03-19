@@ -14,15 +14,18 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int index, pos = 0, len = 0, sum = 0;
+	unsigned int index, pos = 0, len = _strlen(b), sum = 0;
 
 	if  (b == NULL)
 		return (0);
 
-	for (pos = 0; b[pos]; pos ++)
+	for (pos = 0; b[pos]; pos++)
 	{
 		if (b[pos] != '0' && b[pos] != '1')
-			return (0)
+			return (0);
+		index = (len - pos - 1);
+		sum += (b[pos] * (pow(2, index)));
 	}
+	return (sum);
 }
 

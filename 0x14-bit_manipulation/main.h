@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "_strlen.c"
+#include <math.h>
 
 unsigned int _strlen(const char *input);
 
