@@ -15,18 +15,18 @@
 #include "_pow.c"
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int index, pos, len = (_strlen(b) - 1), sum = 0;
+	unsigned int index, pos, len, sum = 0;
 
 /*	printf("len is %i\n", len);*/
 	if  (b == NULL)
 		return (0);
-
+	len = (_strlen(b) - 1);
 	for (pos = 0; b[pos]; pos++)
 	{ /*printf("sum spawned in at %i\n", sum);*/
 		if (b[pos] != '0' && b[pos] != '1')
 			return (0);
 		index = (len - pos);
-		if ((b[pos] -48) != 0)
+		if ((b[pos] - 48) != 0)
 			sum += ((b[pos] - 48) * (_simpow(2, index)));
 		/*converting the char into respective int*/
 		/*will need a separate sorting to use hex/anything including letters*/
