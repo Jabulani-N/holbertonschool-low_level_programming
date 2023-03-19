@@ -26,7 +26,8 @@ unsigned int binary_to_uint(const char *b)
 		if (b[pos] != '0' && b[pos] != '1')
 			return (0);
 		index = (len - pos);
-		sum = sum + ((b[pos] - 48) * (_simpow(2, index)));
+		if ((b[pos] -48) != 0)
+			sum += ((b[pos] - 48) * (_simpow(2, index)));
 		/*converting the char into respective int*/
 		/*will need a separate sorting to use hex/anything including letters*/
 /*		printf("index is %i; pos is %i; sum is %i\n", index, pos, sum);*/
