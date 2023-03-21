@@ -5,18 +5,17 @@
  * Return: The number of fliped bits
  * copied form another's repository
  */
+
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int flips = 0;
-	unsigned long int xor = (n ^ m);
-	unsigned long int max = 0x01;
+	unsigned long int s = n ^ m, count;
 
-	while (max <= xor)
+	for (count = 0; s > 0; s >>= 1)
 	{
-	if (max & xor)
-		flips++;
-	max <<= 1;
+		if (s & 1)
+			count++;
 	}
-	return (flips);
+
+	return (count);
 }
 
