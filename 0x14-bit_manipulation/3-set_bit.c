@@ -5,6 +5,7 @@
  * @n: The number to set bit in
  * @index: The index to set bit at
  * Return: 1 if it worked, or -1 on error
+ * copied from another's repository
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
