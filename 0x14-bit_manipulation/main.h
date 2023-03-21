@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <math.h>
 
+#include "_putchar.c"
 
 unsigned int binary_to_uint(const char *b);
 void print_binary(unsigned long int n);
