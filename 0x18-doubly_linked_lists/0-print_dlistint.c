@@ -12,12 +12,12 @@
 size_t print_dlistint(const dlistint_t *h)
 {
 	const dlistint_t *hold;
-	size_t count = 0;
+/*	size_t count = 0;*/
 
 	if (h == NULL)
 		return (EXIT_FAILURE);
 
-	hold = h;
+/*	hold = h;*/
 	while (h->prev)
 		h = h->prev;
 
