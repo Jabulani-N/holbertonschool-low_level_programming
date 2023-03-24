@@ -15,7 +15,7 @@ size_t print_dlistint(const dlistint_t *h)
 	size_t count = 0;
 
 	if (h == NULL)
-		return (EXIT_FAILURE);
+		return (0);
 
 	hold = h;
 	while (hold->prev)
@@ -30,3 +30,7 @@ size_t print_dlistint(const dlistint_t *h)
 return (count);
 }
 
+/*
+ *	notes
+ * NULL is a valid list. it is size 0
+ */
