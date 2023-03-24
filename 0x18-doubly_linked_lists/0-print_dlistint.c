@@ -18,13 +18,13 @@ size_t print_dlistint(const dlistint_t *h)
 		return (EXIT_FAILURE);
 
 	hold = h;
-/*	while (hold->prev)
-		hold = hold->prev;
-*/
-	while (hold)
+	while (h->prev)
+		h = h->prev;
+
+	while (h)
 	{
-		printf("%i\n", hold->n);
-		hold = hold->next;
+		printf("%i\n", h->n);
+		h = h->next;
 		count++;
 	}
 return (count);
