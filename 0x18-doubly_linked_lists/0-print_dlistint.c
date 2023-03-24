@@ -18,9 +18,9 @@ size_t print_dlistint(const dlistint_t *h)
 		return (EXIT_FAILURE);
 
 	hold = h;
-	while (hold->prev)
+/*	while (hold->prev)
 		hold = hold->prev;
-
+*/
 	while (hold)
 	{
 		printf("%i\n", hold->n);
