@@ -3,6 +3,7 @@
  * add_dnodeint - adds node to head of a linked list
  * @head: alleged head of a node in a dbly linked list
  *	you'll have to naviate to head yourself
+ * @n: goes in the n slot of the new node
  * Return: the number of nodes in the list
  *	on failure: NULL
  * copied from task1
@@ -14,25 +15,26 @@
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *noob = malloc(sizeof(dlistint_t));
-	size_t count = 0;
 
 	if (noob == NULL)
 		return (NULL);
 
-	if (head == NULL)
+	noob->prev = NULL;
+	noob->n = n;
+	noob->next = NULL;
+	if (head == NULL || (*head) == NULL)
 	{
-		&**head = noob;
+		(*head) = noob;
 		return (noob);
 	}
 
 
-	while (*head->prev)
-		*head = *hold->prev;
+	while ((*head)->prev)
+		(*head) = (*head)->prev;
 
-	*head->prev = noob;
+	(*head)->prev = noob;
 	noob->next = *head;
-	noob->prev = NULL;
-	*head = noob;/*change address parent funct identifies as head*/
+	(*head) = noob;/*change address parent funct identifies as head*/
 return (*head);
 }
 
