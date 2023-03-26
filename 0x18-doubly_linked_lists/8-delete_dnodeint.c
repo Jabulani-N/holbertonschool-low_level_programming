@@ -40,7 +40,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	else
 	{
 		if (hold->prev)/*node before but not after*/
-			hold->prev->next = NULL
+			hold->prev->next = NULL;
 	} /*if none, it is a lone node node in default state*/
 				/*it would need no change*/
 
