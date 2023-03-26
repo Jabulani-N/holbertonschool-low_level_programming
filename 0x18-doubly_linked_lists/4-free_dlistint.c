@@ -1,7 +1,7 @@
 
 /**
- * dlistint_len - counts all nodes of a linked list
- * @head: *head is address of alleged head of  dbly linked list
+ * free_dlistint - counts all nodes of a linked list
+ * @head: address of alleged head of  dbly linked list
  *	you'll have to naviate to head yourself
  * Return: nothnig
  *
@@ -14,17 +14,16 @@ void free_dlistint(dlistint_t *head)
 {
 	dlistint_t *holder;
 
-	if (head == NULL || (*head) == NULL)
+	if (head == NULL)
 		return;
 
-	while ((*head)->prev)
-		(*head) = (*head)->prev;
+	while ((head)->prev)
+		(head) = ((head)->prev);
 
-	while (*head)
+	while (head)
 	{
-		holder = (*head);
-		(*head) = (*head)->next;
-		free(holder->n);
+		holder = (head);
+		(head) = ((head)->next);
 		free(holder);
 	}
 }
