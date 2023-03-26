@@ -31,7 +31,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	} /*we're now on the node we want to delete*/
 
 	if (hold->next)
-		if(hold->prev)/*there is both node sbefore and after*/
+		if (hold->prev)/*there is both node sbefore and after*/
 			(hold->next)->prev = (hold->prev);
 		else/*node after but not before*/
 			hold->next->prev = NULL;
@@ -40,7 +40,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			hold->prev->next = NULL
 	/*neither previous nor next is a lone node node in default state*/
 				/*it would need no change*/
-				
+
 	/*now remove from history like Abdul Karim's letters*/
 	free(hold);
 	return (1);
