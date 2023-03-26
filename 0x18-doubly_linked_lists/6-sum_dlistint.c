@@ -15,10 +15,10 @@ int sum_dlistint(dlistint_t *head)
 	const dlistint_t *hold;
 	int count = 0;
 
-	if (h == NULL)
+	if (head == NULL)
 		return (0);
 
-	hold = h;
+	hold = head;
 	while (hold->prev)
 		hold = hold->prev;
 
