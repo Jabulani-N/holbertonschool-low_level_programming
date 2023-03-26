@@ -13,7 +13,7 @@
 int sum_dlistint(dlistint_t *head)
 {
 	const dlistint_t *hold;
-	size_t count = 0;
+	int count = 0;
 
 	if (h == NULL)
 		return (0);
