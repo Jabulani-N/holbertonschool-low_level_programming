@@ -1,10 +1,10 @@
 
 /**
  * sum_dlistint - counts all nodes of a linked list
- * @h: address of a node in a dbly linked list
+ * @head: address of a node in a dbly linked list
  *	you'll have to naviate to head yourself
- * Return: the number of nodes in the list
- *	on failure: EXIT_FAILURE
+ * Return: sum of n values
+ *	on failure: 0
  * copied from task1, repurposing count
  */
 
@@ -24,8 +24,8 @@ int sum_dlistint(dlistint_t *head)
 
 	while (hold)
 	{
-		hold = hold->next;
 		count += hold->n;
+		hold = hold->next;
 	}
 return (count);
 }
