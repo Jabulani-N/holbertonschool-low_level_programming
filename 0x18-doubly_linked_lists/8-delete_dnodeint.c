@@ -13,7 +13,7 @@
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	dlistint_t *hold;
+	dlistint_t *hold, *link;
 
 	if (head == NULL || (*head) == NULL)
 		return (1);
@@ -32,15 +32,19 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (hold->next)
 	{
-		if (hold->prev)/*there is both node sbefore and after*/
-			(hold->next)->prev = (hold->prev);
+		link = hold->next;
+		if (hold->prev)/*there is both nodes before and after*/
+			link->prev = hold->prev;
 		else/*node after but not before*/
-			hold->next->prev = NULL;
+			link->prev = NULL;
 	}
 	else
 	{
 		if (hold->prev)/*node before but not after*/
-			hold->prev->next = NULL;
+		{
+			link = hold->prev;
+			link->next = NULL;
+		}
 	} /*if none, it is a lone node node in default state*/
 				/*it would need no change*/
 
