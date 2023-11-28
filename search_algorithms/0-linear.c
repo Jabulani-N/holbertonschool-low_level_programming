@@ -11,9 +11,9 @@
 int linear_search(int *array, size_t size, int value)
 {
     /*
-     *array is a pointer to the array
+    * *array is a pointer to the array
     * we want to search through array
-    * DOUBLECHECK THIS: return what position is holding
+    * DOUBLECHECK THIS: return what position is holding value
     */
 
 }
