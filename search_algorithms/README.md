@@ -15,3 +15,13 @@ Requirements:
 * No more than 5 functions per file
 
 * You are only allowed to use the `printf` function of the standard library. Any call to another function like `strdup`, `malloc`, … is forbidden.
+
+
+## Task0
+
+each check will need to print in this format:
+
+* `Value checked array[2] = [42]`
+
+* * this means it checked index 2 and found `42`
+
