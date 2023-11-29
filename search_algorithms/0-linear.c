@@ -20,4 +20,5 @@ int linear_search(int *array, size_t size, int value)
     *   see example in README.md
     */
 
+    return 0
 }
