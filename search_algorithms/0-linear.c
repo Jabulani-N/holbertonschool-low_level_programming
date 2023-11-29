@@ -1,5 +1,14 @@
 #include "search_algos.h"
 
+/**
+ *linear_search - returns index of array array containing value value
+ * A string is an array of characters
+ * @array: the array that'll be investigsted
+ * @size: the length of array
+ * @value: value to find. int.
+ * Return: index containing value
+ **/
+
 /*
 * Write a function that searches for a value in an array
 * of integers using the Linear search algorithm
