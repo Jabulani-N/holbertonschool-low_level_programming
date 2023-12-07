@@ -19,6 +19,7 @@ Requirements:
 
 ## Task0
 
+* checked via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 0-main.c 0-linear.c -o 0-linear`
 each check will need to print in this format:
 
 * `Value checked array[2] = [42]`
