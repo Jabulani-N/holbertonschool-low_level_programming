@@ -36,7 +36,7 @@ int linear_search(int *array, size_t size, int value)
 		/* and while it is still within range of array*/
 		/* be sure to do the print part that reports current index*/
 	{
-		printf("Value checked array[%i] = [%i]", i, array[i]);
+		printf("Value checked array[%i] = [%i]\n", i, array[i]);
 		i++;
 	}
 
