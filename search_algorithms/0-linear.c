@@ -28,10 +28,10 @@ int linear_search(int *array, size_t size, int value)
 	* each check needs to print the position and value
 	*   see example in README.md
 	*/
-	int i = 0;
-	size_t array_size = sizeof(array) / sizeof(array[0]);
+	unsigned int i = 0;
 
-	while (array[i] != value && i < array_size)
+
+	while (array[i] != value && i < size)
 		/*while it is not the target value*/
 		/* and while it is still within range of array*/
 		/* be sure to do the print part that reports current index*/
