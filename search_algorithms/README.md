@@ -26,6 +26,8 @@ each check will need to print in this format:
 
 * * this means it checked index 2 and found `42`
 
+The algorithm will print each checked index, either up to and including the index containing the targt value, or the final index. Whichever comes first.
+
 ## task1
 
 tested via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 1-main.c 1-binary.c -o 1-binary`
