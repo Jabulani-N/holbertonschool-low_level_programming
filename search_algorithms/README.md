@@ -19,6 +19,8 @@ Requirements:
 
 ## Task0
 
+prototype: `int linear_search(int *array, size_t size, int value);`
+
 * tested via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 0-main.c 0-linear.c -o 0-linear`
 each check will need to print in this format:
 
@@ -29,6 +31,8 @@ each check will need to print in this format:
 The algorithm will print each checked index, either up to and including the index containing the targt value, or the final index. Whichever comes first.
 
 ## task1
+
+prototype: `int binary_search(int *array, size_t size, int value);`
 
 tested via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 1-main.c 1-binary.c -o 1-binary`
 
