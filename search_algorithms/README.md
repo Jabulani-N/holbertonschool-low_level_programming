@@ -43,4 +43,6 @@ Uses a [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) al
 
 This will first check the center value of the array in question. if it is not the value, it will check either the values above or below the center value, depending on whether the target is higher or lower than hte center value. that "half" of the array is the new "array in question."
 
-repeat until arraqy is length 2/1, or hte center value actually is the target value.
+repeat until arraqy is length 2/1, or the center value actually is the target value.
+
+### You can assume that `array` will be sorted in ascending order
