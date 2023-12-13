@@ -33,3 +33,10 @@ The algorithm will print each checked index, either up to and including the inde
 tested via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 1-main.c 1-binary.c -o 1-binary`
 
 
+Uses a [Binary Search](https://en.wikipedia.org/wiki/Binary_search_algorithm) algorithm.
+
+<img src="[simple-shell spreadsheet.PNG](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Binary-search-work.gif/330px-Binary-search-work.gif)" width="400\"/>
+
+This will first check the center value of the array in question. if it is not the value, it will check either the values above or below the center value, depending on whether the target is higher or lower than hte center value. that "half" of the array is the new "array in question."
+
+repeat until arraqy is length 2/1, or hte center value actually is the target value.
