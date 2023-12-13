@@ -19,10 +19,15 @@ Requirements:
 
 ## Task0
 
-* checked via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 0-main.c 0-linear.c -o 0-linear`
+* tested via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 0-main.c 0-linear.c -o 0-linear`
 each check will need to print in this format:
 
 * `Value checked array[2] = [42]`
 
 * * this means it checked index 2 and found `42`
+
+## task1
+
+tested via `gcc -Wall -Wextra -Werror -pedantic -std=gnu89 1-main.c 1-binary.c -o 1-binary`
+
 
