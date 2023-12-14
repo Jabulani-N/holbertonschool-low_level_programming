@@ -33,15 +33,16 @@ int binary_search(int *array, size_t size, int value)
 	*   see example in README.md
 	*/
 	unsigned int i = size/2;
-	unsigned int i2 = i;
-	//we're making i start as the center value, and if there are 2, i2 will be the other
-
+	unsigned int i2 = i - (1 - (size % 2));
+	//we're making i start as the center value, and if there are 2, i2 will be the lower center value
+	// this makes i2 = i if size's an odd number, so both are center
+	// i2 = i-1 if size is an even number, so it's the one just below the higher middle value
 	if (array == NULL)
 	{
 		return (-1);
 	}
 
-	while (array[i] != value && i < size)
+	while (array[i] != value && array[i2] != value)
 		/*check if either i or i2 is target*/
 		/* if not, find direction to go*/
 		/* be sure to do the print part the array being checked*/
