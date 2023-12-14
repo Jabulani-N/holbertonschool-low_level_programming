@@ -46,3 +46,9 @@ This will first check the center value of the array in question. if it is not th
 repeat until arraqy is length 2/1, or the center value actually is the target value.
 
 ### You can assume that `array` will be sorted in ascending order
+
+
+Division in C:
+
+* `5/2` = 2 (the whole number.)
+* `5%2` = 1 (the remainder of `5/2`)
