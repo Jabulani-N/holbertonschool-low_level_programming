@@ -17,18 +17,24 @@
 	* and finishes when it either ends or when it finds a match
 	*/
 
-int linear_search(int *array, size_t size, int value)
+int binary_search(int *array, size_t size, int value)
 {
 	/*
 	* *array is a pointer to the array
-	* we want to search through array
-	* return first index holding value
+	* we want to check the middle value of the array
+	* * if there are 2 middle values, check both of them
+
+	* if the middle index does not contain value, divide array in half
+	* repeat on the relevant half
+	*
 	* if none hold value, or if value == NULL, return -1
 	*
 	* each check needs to print the position and value
 	*   see example in README.md
 	*/
-	unsigned int i = 0;
+	unsigned int i = size/2;
+	unsigned int i2 = NULL;
+	//we're making i start as the center value, and if there are 2, i2 will be the other
 
 	if (array == NULL)
 	{
