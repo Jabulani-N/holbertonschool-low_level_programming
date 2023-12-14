@@ -33,7 +33,7 @@ int binary_search(int *array, size_t size, int value)
 	*   see example in README.md
 	*/
 	unsigned int i = size/2;
-	unsigned int i2 = NULL;
+	unsigned int i2 = i;
 	//we're making i start as the center value, and if there are 2, i2 will be the other
 
 	if (array == NULL)
@@ -42,9 +42,9 @@ int binary_search(int *array, size_t size, int value)
 	}
 
 	while (array[i] != value && i < size)
-		/*while it is not the target value*/
-		/* and while it is still within range of array*/
-		/* be sure to do the print part that reports current index*/
+		/*check if either i or i2 is target*/
+		/* if not, find direction to go*/
+		/* be sure to do the print part the array being checked*/
 	{
 		printf("Value checked array[%i] = [%i]\n", i, array[i]);
 		i++;
