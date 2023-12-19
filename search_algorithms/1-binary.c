@@ -1,7 +1,7 @@
 #include "search_algos.h"
 
 /**
-	*linear_search - returns index of array array containing value value
+	*binary_search - returns index of array array containing value value
 	* A string is an array of characters
 	* @array: the array that'll be investigsted
 	* @size: the length of array
@@ -17,8 +17,6 @@
 	* and finishes when it either ends or when it finds a match
 	*/
 
-int binary_search(int *array, size_t size, int value)
-{
 	/*
 	* *array is a pointer to the array
 	* we want to check the middle value of the array
@@ -32,22 +30,40 @@ int binary_search(int *array, size_t size, int value)
 	* each check needs to print the position and value
 	*   see example in README.md
 	*/
-	unsigned int i = size/2;
+
+int binary_search(int *array, size_t size, int value)
+{
+	unsigned int i = size / 2;
 	unsigned int i2 = i - (1 - (size % 2));
-	//we're making i start as the center value, and if there are 2, i2 will be the lower center value
-	// this makes i2 = i if size's an odd number, so both are center
-	// i2 = i-1 if size is an even number, so it's the one just below the higher middle value
+	unsigned int scroller = 0;
+	/*
+	* we're making i start as the center value, and if there are 2,
+	* i2 will be the lower center value
+	* this makes i2 = i if size's an odd number, so both are center
+	* i2 = i-1 if size is an even number,
+	*	so i2 is the one just below the higher middle value
+	*/
 	if (array == NULL)
 	{
 		return (-1);
 	}
 
-	while (array[i] != value && array[i2] != value)
+	while (array[i] != value && array[i2] != value && i < size)
 		/*check if either i or i2 is target*/
 		/* if not, find direction to go*/
 		/* be sure to do the print part the array being checked*/
 	{
-		printf("Value checked array[%i] = [%i]\n", i, array[i]);
+		printf("Searching in array: ");
+		while (scroller < size)
+		{
+			printf("%i", array[scroller]);
+			if (scroller < size - 1)
+			{
+				printf(", ");
+			}
+			scroller++;
+		}
+		printf("\n");
 		i++;
 	}
 

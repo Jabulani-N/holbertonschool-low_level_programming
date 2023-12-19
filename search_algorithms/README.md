@@ -52,3 +52,8 @@ Division in C:
 
 * `5/2` = 2 (the whole number.)
 * `5%2` = 1 (the remainder of `5/2`)
+
+Currently, we need to
+
+* make task1 divide the array in half after each check.
+* reassign i, i2 to the center of the new array
