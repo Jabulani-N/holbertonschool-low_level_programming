@@ -36,6 +36,7 @@ int binary_search(int *array, size_t size, int value)
 	unsigned int i = size / 2;
 	unsigned int i2 = i - (1 - (size % 2));
 	unsigned int scroller = 0;
+	int *currentArray = array;
 	/*
 	* we're making i start as the center value, and if there are 2,
 	* i2 will be the lower center value
@@ -48,26 +49,25 @@ int binary_search(int *array, size_t size, int value)
 		return (-1);
 	}
 
-	while (array[i] != value && array[i2] != value && i < size)
+	while (currentArray[i] != value && currentArray[i2] != value && i < size)
 		/*check if either i or i2 is target*/
 		/* if not, find direction to go*/
-		/* be sure to do the print part the array being checked*/
 	{
 		printf("Searching in array: ");
 		while (scroller < size)
-		{
-			printf("%i", array[scroller]);
+		{ /* reports the current array*/
+			printf("%i", currentArray[scroller]);
 			if (scroller < size - 1)
 			{
 				printf(", ");
 			}
 			scroller++;
-		}
-		printf("\n");
+		} printf("\n");
+
 		i++;
 	}
 
-	if (array[i] == value)
+	if (currentArray[i] == value)
 	{ /*if it actually found the right target, return the index*/
 	printf("Value checked array[%i] = [%i]\n", i, array[i]);
 		return (i);
