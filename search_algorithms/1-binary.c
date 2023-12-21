@@ -50,9 +50,9 @@ int binary_search(int *array, size_t size, int value)
 		return (-1);
 	}
 
-	while (currentArray[i] != value && currentArray[i2] != value && i <= lastIdx && i >= firstIdx)
+	while (currentArray[i] != value && currentArray[i2] != value
+			&& i <= lastIdx && i >= firstIdx)
 		/*check if either i or i2 is target*/
-		/* if not, find direction to go*/
 	{
 		printf("Searching in array: ");
 		scroller = firstIdx;
@@ -62,17 +62,24 @@ int binary_search(int *array, size_t size, int value)
 			if (scroller < lastIdx)
 			{
 				printf(", ");
-			}
-			scroller++;
+			} scroller++;
 		} printf("\n");
-
 		i++;
+		if (value > currentArray[i])
+		{ /* change first index to be the index after i, and relocate i, i2*/
+			firstIdx = i + 1;
+			i = firstIdx + ((lastIdx - firstIdx) / 2);
+			i2 = i - (1 - ((lastIdx - firstIdx) % 2));
+		}
+		else if (value < currentArray[i2])
+		{ /* change last index to be the index before i2, and relocate i, i2*/
+			lastIdx = i2 - 1;
+			i = firstIdx + ((lastIdx - firstIdx) / 2);
+			i2 = i - (1 - ((lastIdx - firstIdx) % 2));
+		}
 	}
 
 	if (currentArray[i] == value)
-	{ /*if it actually found the right target, return the index*/
-	printf("Value checked array[%i] = [%i]\n", i, array[i]);
-		return (i);
-	}
+	{ return (i); }
 	return (-1);
 }
