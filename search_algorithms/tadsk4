@@ -1,2 +1,13 @@
 
 gitter: Adding all
+
+gitter: Committing
+[master 1384ad4] task3-renamed
+ 2 files changed, 2 insertions(+)
+ rename search_algorithms/{3-O => 4-O} (100%)
+ create mode 100644 search_algorithms/tadsk4
+
+gitter: Pushing
+
+gitter: DONE
+
