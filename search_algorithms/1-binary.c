@@ -31,13 +31,6 @@
 	*   see example in README.md
 	*/
 
-int binary_search(int *array, size_t size, int value)
-{
-	unsigned int i = size / 2;
-	unsigned int i2 = i - (1 - (size % 2));
-	unsigned int scroller = 0;
-	int *currentArray = array;
-	unsigned int firstIdx = 0, lastIdx = size - 1;
 	/*
 	* we're making i start as the center value, and if there are 2,
 	* i2 will be the lower center value
@@ -45,11 +38,18 @@ int binary_search(int *array, size_t size, int value)
 	* i2 = i-1 if size is an even number,
 	*	so i2 is the one just below the higher middle value
 	*/
+int binary_search(int *array, size_t size, int value)
+{
+	unsigned int i = size / 2;
+	unsigned int i2 = i - (1 - (size % 2));
+	unsigned int scroller = 0;
+	int *currentArray = array;
+	unsigned int firstIdx = 0, lastIdx = size - 1;
+
 	if (array == NULL)
 	{
 		return (-1);
 	}
-
 	while (currentArray[i] != value && currentArray[i2] != value
 			&& i <= lastIdx && i >= firstIdx)
 		/*check if either i or i2 is target*/
@@ -70,15 +70,13 @@ int binary_search(int *array, size_t size, int value)
 			firstIdx = i + 1;
 			i = firstIdx + ((lastIdx - firstIdx) / 2);
 			i2 = i - (1 - ((lastIdx - firstIdx) % 2));
-		}
-		else if (value < currentArray[i2])
+		} else if (value < currentArray[i2])
 		{ /* change last index to be the index before i2, and relocate i, i2*/
 			lastIdx = i2 - 1;
 			i = firstIdx + ((lastIdx - firstIdx) / 2);
 			i2 = i - (1 - ((lastIdx - firstIdx) % 2));
 		}
 	}
-
 	if (currentArray[i] == value)
 	{ return (i); }
 	return (-1);
